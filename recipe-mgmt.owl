@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> .
 
-<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> rdf:type owl:Ontology .
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://eulersharp.sourceforge.net/2003/03swap/countries> .
 
 #################################################################
 #    Datatypes
@@ -48,7 +49,9 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasRecipe
 :hasRecipe rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
-           owl:inverseOf :isRecipeFor .
+           owl:inverseOf :isRecipeFor ;
+           rdfs:domain :Dish ;
+           rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep
@@ -96,7 +99,9 @@
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                    rdfs:domain :Dish ;
+                                                                                    rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious
@@ -119,7 +124,9 @@
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#needsTool
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#needsTool> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:subPropertyOf owl:topObjectProperty .
+                                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool> .
 
 
 #################################################################
@@ -166,10 +173,6 @@
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Origin
-<http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Origin> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe
