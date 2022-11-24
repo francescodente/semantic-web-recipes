@@ -45,12 +45,23 @@
                 rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
 
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasRecipe
+:hasRecipe rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :isRecipeFor .
+
+
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep
 :hasStep rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdf:type owl:TransitiveProperty ;
          rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
          rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#isRecipeFor
+:isRecipeFor rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter
@@ -144,6 +155,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish
+:Dish rdf:type owl:Class .
+
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#StepDescription
 :StepDescription rdf:type owl:Class .
