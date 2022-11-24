@@ -32,6 +32,27 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription
+:hasDescription rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+                rdfs:range :StepDescription .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInitialStep
+:hasInitialStep rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasStep ;
+                rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
+                rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep
+:hasStep rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:TransitiveProperty ;
+         rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
+         rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
+
+
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter> rdf:type owl:ObjectProperty ;
                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -94,6 +115,19 @@
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInstructions
+:hasInstructions rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :StepDescription ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasTitle
+:hasTitle rdf:type owl:DatatypeProperty ;
+          rdfs:domain :StepDescription ;
+          rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasDifficulty
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasDifficulty> rdf:type owl:DatatypeProperty ;
                                                                                         rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
@@ -110,6 +144,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#StepDescription
+:StepDescription rdf:type owl:Class .
+
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> rdf:type owl:Class .
