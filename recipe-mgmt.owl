@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> .
 
-<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> rdf:type owl:Ontology .
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://purl.org/heals/foodon/> .
 
 #################################################################
 #    Annotation properties
@@ -216,6 +217,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/heals/food/Food
+<http://purl.org/heals/food/Food> owl:equivalentClass <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> .
+
 
 ###  http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country
 <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> rdf:type owl:Class .
