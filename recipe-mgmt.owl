@@ -46,11 +46,15 @@
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     owl:inverseOf <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf> ;
                     rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
-                    rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> .
+                    rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> ;
+                    owl:propertyChainAxiom ( :hasIngredientWithQuantity
+                                             <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient>
+                                           ) .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription
-:hasDescription rdf:type owl:ObjectProperty ;
+:hasDescription rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
                 rdfs:range :StepDescription .
 
@@ -65,6 +69,7 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInitialStep
 :hasInitialStep rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasStep ;
+                rdf:type owl:InverseFunctionalProperty ;
                 rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
                 rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
@@ -72,6 +77,7 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasMeasurementUnit
 :hasMeasurementUnit rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdf:type owl:FunctionalProperty ;
                     rdfs:domain :Quantity ;
                     rdfs:range :MeasurementUnit .
 
@@ -87,6 +93,7 @@
 :hasRecipe rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            owl:inverseOf :isRecipeFor ;
+           rdf:type owl:InverseFunctionalProperty ;
            rdfs:domain :Dish ;
            rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> .
 
@@ -94,20 +101,15 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep
 :hasStep rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
-         rdf:type owl:TransitiveProperty ;
+         rdf:type owl:InverseFunctionalProperty ;
          rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
          rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
-
-
-###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasUnit
-:hasUnit rdf:type owl:ObjectProperty ;
-         rdfs:domain :Quantity ;
-         rdfs:range :MeasurementUnit .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#isRecipeFor
 :isRecipeFor rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
              rdfs:range :Dish .
 
@@ -115,7 +117,8 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter> rdf:type owl:ObjectProperty ;
                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                       rdf:type owl:TransitiveProperty ;
+                                                                                       rdf:type owl:TransitiveProperty ,
+                                                                                                owl:IrreflexiveProperty ;
                                                                                        rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
                                                                                        rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
@@ -123,7 +126,8 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore> rdf:type owl:ObjectProperty ;
                                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                        rdf:type owl:TransitiveProperty ;
+                                                                                        rdf:type owl:TransitiveProperty ,
+                                                                                                 owl:IrreflexiveProperty ;
                                                                                         rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
                                                                                         rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
@@ -139,6 +143,7 @@
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> rdf:type owl:ObjectProperty ;
                                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore> ;
                                                                                   owl:inverseOf <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> ;
+                                                                                  rdf:type owl:IrreflexiveProperty ;
                                                                                   rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
                                                                                   rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
@@ -153,28 +158,16 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> rdf:type owl:ObjectProperty ;
                                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter> ;
+                                                                                      rdf:type owl:IrreflexiveProperty ;
                                                                                       rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
                                                                                       rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf> rdf:type owl:ObjectProperty ;
-                                                                                         rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#neededTool
-<http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#neededTool> rdf:type owl:ObjectProperty ;
-                                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                     owl:inverseOf <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#needsTool> ;
-                                                                                     rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
-                                                                                     rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool> .
-
-
-###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#needsTool
-<http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#needsTool> rdf:type owl:ObjectProperty ;
-                                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                    rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
-                                                                                    rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool> .
+                                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> ;
+                                                                                         rdfs:range <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> .
 
 
 #################################################################
@@ -257,67 +250,5 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> rdf:type owl:Class .
 
-
-###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool
-<http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool> rdf:type owl:Class .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country>
-                :Dish
-                :IngredientWithQuantity
-                :MeasurementUnit
-                :Quantity
-                :StepDescription
-                <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient>
-                <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe>
-                <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step>
-                <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Tool>
-              )
-] .
-
-
-#################################################################
-#    Rules
-#################################################################
-
-:recipe rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:iwq rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:ingredient rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "ContainedIngredients"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasIngredientWithQuantity ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :recipe ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :iwq
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :iwq ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ingredient
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :containsIngredient ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :recipe ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :ingredient
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
