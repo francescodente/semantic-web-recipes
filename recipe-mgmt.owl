@@ -7,7 +7,8 @@
 @base <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> .
 
 <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt> rdf:type owl:Ontology ;
-                                                                   owl:imports <http://purl.org/heals/foodon/> .
+                                                                   owl:imports <http://purl.org/heals/foodon/> ,
+                                                                               <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries> .
 
 #################################################################
 #    Annotation properties
