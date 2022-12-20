@@ -56,8 +56,7 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription
 :hasDescription rdf:type owl:ObjectProperty ,
                          owl:FunctionalProperty ;
-                rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
-                rdfs:range :StepDescription .
+                rdfs:domain <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasIngredientWithQuantity
@@ -178,13 +177,11 @@
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInstructions
 :hasInstructions rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:domain :StepDescription ;
                  rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
-          rdfs:domain :StepDescription ;
           rdfs:range xsd:string .
 
 
@@ -232,10 +229,6 @@
 :Quantity rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#StepDescription
-:StepDescription rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> rdf:type owl:Class .
 
@@ -252,9 +245,216 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BakingPowder
+:BakingPowder rdf:type owl:NamedIndividual ,
+                       <http://purl.obolibrary.org/obo/FOODON_03400765> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BasicPancakes
+:BasicPancakes rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe> ;
+               :hasInitialStep :PreheatOven ;
+               :hasTitle "Pancakes"@en ;
+               <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasDifficulty> "easy"@en ;
+               <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPreparationTimeInMinutes> "20"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Cook
+:Cook rdf:type owl:NamedIndividual ,
+               <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+      <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> :SpreadBatter ;
+      <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You'll have 12 to 15 pancakes.) Serve warm, with desired toppings."@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Cup
+:Cup rdf:type owl:NamedIndividual ,
+              :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Flour
+:Flour rdf:type owl:NamedIndividual ,
+                <http://purl.obolibrary.org/obo/FOODON_03400759> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Grams
+:Grams rdf:type owl:NamedIndividual ,
+                :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Litres
+:Litres rdf:type owl:NamedIndividual ,
+                 :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Mix
+:Mix rdf:type owl:NamedIndividual ,
+              <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+     <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> :Mix2 ;
+     <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> :Mix ;
+     <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside."@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Mix2
+:Mix2 rdf:type owl:NamedIndividual ,
+               <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+      <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> :SpreadBatter ;
+      <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> :Mix ;
+      <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine)."@en .
+
+
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancakes
 :Pancakes rdf:type owl:NamedIndividual ,
-                   :Dish .
+                   :Dish ;
+          :hasRecipe :BasicPancakes ;
+          <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin> <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#PreheatOven
+:PreheatOven rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+             <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> :Mix ;
+             <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#SpreadBatter
+:SpreadBatter rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+              <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> :ToolPrep ;
+              <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> :Mix2 ;
+              <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet)."@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Sugar
+:Sugar rdf:type owl:NamedIndividual ,
+                <http://purl.obolibrary.org/obo/FOODON_03400765> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Tablespoon
+:Tablespoon rdf:type owl:NamedIndividual ,
+                     :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Teaspoon
+:Teaspoon rdf:type owl:NamedIndividual ,
+                   :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#ToolPrep
+:ToolPrep rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step> ;
+          <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext> :SpreadBatter ;
+          <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious> :Mix2 ;
+          <http://www.omg.org/techprocess/ab/SpecificationMetadata/hasDescription> "Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel."@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Unit
+:Unit rdf:type owl:NamedIndividual ,
+               :MeasurementUnit .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#butter
+:butter rdf:type owl:NamedIndividual ,
+                 <http://purl.obolibrary.org/obo/FOODON_03400773> ;
+        <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :Flour .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chicken_egg
+:chicken_egg rdf:type owl:NamedIndividual ,
+                      <http://purl.obolibrary.org/obo/FOODON_03400744> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#cow_milk
+:cow_milk rdf:type owl:NamedIndividual ,
+                   <http://purl.obolibrary.org/obo/FOODON_03400740> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#salt
+:salt rdf:type owl:NamedIndividual ,
+               <http://purl.org/heals/food/Food> .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupFlour
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupFlour> rdf:type owl:NamedIndividual ,
+                                                                                     :IngredientWithQuantity ;
+                                                                            :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup> ;
+                                                                            <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :Flour .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupMilk
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupMilk> rdf:type owl:NamedIndividual ,
+                                                                                    :IngredientWithQuantity ;
+                                                                           :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup> ;
+                                                                           <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :cow_milk .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1Egg
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1Egg> rdf:type owl:NamedIndividual ,
+                                                                                :IngredientWithQuantity ;
+                                                                       :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit> ;
+                                                                       <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :chicken_egg .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup> rdf:type owl:NamedIndividual ,
+                                                                                :Quantity ;
+                                                                       :hasMeasurementUnit :Cup ;
+                                                                       :hasValue "1"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit> rdf:type owl:NamedIndividual ,
+                                                                                 :Quantity ;
+                                                                        :hasMeasurementUnit :Unit ;
+                                                                        :hasValue "1"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2TeaspnSalt
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2TeaspnSalt> rdf:type owl:NamedIndividual ,
+                                                                                         :IngredientWithQuantity ;
+                                                                                :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon> ;
+                                                                                <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :salt .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon> rdf:type owl:NamedIndividual ,
+                                                                                       :Quantity ;
+                                                                              :hasMeasurementUnit :Teaspoon ;
+                                                                              :hasValue "0.5"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnButter
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnButter> rdf:type owl:NamedIndividual ,
+                                                                                           :IngredientWithQuantity ;
+                                                                                  :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons> ;
+                                                                                  <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :butter .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnSugar
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnSugar> rdf:type owl:NamedIndividual ,
+                                                                                          :IngredientWithQuantity ;
+                                                                                 :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons> ;
+                                                                                 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :Sugar .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TeaspnBakingPowder
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TeaspnBakingPowder> rdf:type owl:NamedIndividual ,
+                                                                                               :IngredientWithQuantity ;
+                                                                                      :hasQuantity <http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons> ;
+                                                                                      <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient> :BakingPowder .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons> rdf:type owl:NamedIndividual ,
+                                                                                        :Quantity ;
+                                                                               :hasMeasurementUnit :Tablespoon ;
+                                                                               :hasValue "2"@en .
+
+
+###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons
+<http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons> rdf:type owl:NamedIndividual ,
+                                                                                      :Quantity ;
+                                                                             :hasMeasurementUnit :Teaspoon ;
+                                                                             :hasValue "2"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
