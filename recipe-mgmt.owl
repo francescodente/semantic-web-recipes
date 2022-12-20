@@ -153,7 +153,7 @@
 <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin> rdf:type owl:ObjectProperty ;
                                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
                                                                                     rdfs:domain :Dish ;
-                                                                                    rdfs:range <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> .
+                                                                                    rdfs:range <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Country> .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious
@@ -214,10 +214,6 @@
 
 ###  http://purl.org/heals/food/Food
 <http://purl.org/heals/food/Food> owl:equivalentClass <http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient> .
-
-
-###  http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country
-<http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish
