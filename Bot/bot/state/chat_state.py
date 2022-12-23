@@ -9,12 +9,12 @@ class ChatState:
     def get_selected_country(self):
         return self.country
     
-    def add_selected_ingredient(self, ingredient):
-        self.ingredients.add(ingredient)
-
-    def remove_ingredient(self, ingredient):
-        self.ingredients.remove(ingredient)
+    def set_selected_ingredients(self, ingredients):
+        self.ingredients = list(ingredients)
+    
+    def get_selected_ingredients(self):
+        return self.ingredients
     
     def reset(self):
         self.country = None
-        self.ingredients = set([])
+        self.ingredients = []
