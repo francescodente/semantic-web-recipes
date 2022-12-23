@@ -1,28 +1,36 @@
 package recipes;
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.io.File; 
+import java.io.FileNotFoundException; 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.Scanner; 
+import java.util.stream.Collectors;
 
 public class RecipeReader {
-private File myFile;
 private Scanner myScanner;
-private String filename;
 
-
-public RecipeReader() {
-	super();
-}
-
-public void setFile(String filename) {
-	this.filename = filename;
-	this.myFile = new File(filename);
+public Recipe read(String filepath) {
+	File myFile = new File(filepath);
+	String dish = this.readfield(myFile, "Dish").get(0);
+	String title = this.readfield(myFile, "Title").get(0);
+	String origin = this.readfield(myFile, "Origin").get(0);	
+	int time = Integer.parseInt(readfield(myFile, "Time").get(0));
+	readfield(myFile,"Ingredients").stream().forEach(ingLine-> this.parseIngredient(ingLine));
 	
+	List<Ingredient> ingredients = this.readfield(myFile, "Ingredients").stream()
+																		.map(ingLine -> this.parseIngredient(ingLine))
+																		.collect(Collectors.toList());	
+	List<String> steps = readfield(myFile,"Directions");
+	return new Recipe(dish, title, origin, time, ingredients, steps);
 }
 
-private List<String> readfield(String fieldTitle) {
-	this.myScanner = new Scanner(ClassLoader.getSystemResourceAsStream(filename));
+
+private List<String> readfield(File file, String fieldTitle) {
+	try {
+		this.myScanner = new Scanner(file);
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	}
 	List<String> fieldData = new ArrayList<>();
 	String line;
 	Boolean readingRightLines = false; 
@@ -42,25 +50,15 @@ private List<String> readfield(String fieldTitle) {
 	return fieldData;
 }
 
-public List<String>getIngredients() {
-	return readfield("Ingredients");
+private Ingredient parseIngredient(String ingLine) {
+	String[] line = ingLine.split(" ");
+	
+	double quantity = Double.parseDouble(line[0]);
+	String measurmentUnit = line[1];
+	String ingName = ingLine.substring(line[0].length()+line[1].length()+1);
+	
+	return new Ingredient(quantity, measurmentUnit , ingName);	
 }
-
-public List<String>getDirections(){
-	return readfield("Directions");
-}
-
-public String getOrigin(){
-	return readfield("Origin").get(0);
-}
-
-public int getTime(){
-	return Integer.parseInt(readfield("Time").get(0));
-}
-
-
-
-
 	
 	
 	

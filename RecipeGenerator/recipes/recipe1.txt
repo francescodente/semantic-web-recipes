@@ -1,5 +1,13 @@
+Dish
+Lumpia
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Title
+Traditional Filipino Lumpia
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 Origin
-India
+Philippines
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 Time
@@ -31,7 +39,7 @@ Ingredients
 
 1 teaspoon soy sauce
 
-30 lumpia wrappers
+30 units lumpia wrappers
 
 2 cups vegetable oil for frying, or as needed
 
