@@ -10,31 +10,12 @@ class TelegramBot:
     def __init__(self, token):
         self.updater = Updater(token, use_context=True)
 
-        recipes_handler = RecipesConversationHandler()
-
         dispatcher = self.updater.dispatcher
 
         dispatcher.add_handler(CommandHandler('start', callback=self.start_cmd))
         dispatcher.add_handler(CommandHandler('help', callback=self.help_cmd))
 
-        dispatcher.add_handler(ConversationHandler(
-            entry_points=[
-                CommandHandler('recipe', callback=recipes_handler.begin)
-            ],
-            states={
-                bot_states.INITIAL: [
-                    CallbackQueryHandler(callback=recipes_handler.select_ingredients, pattern=bot_events.SELECT_INGREDIENTS),
-                    CallbackQueryHandler(callback=recipes_handler.select_origin, pattern=bot_events.SELECT_ORIGIN),
-                ],
-                bot_states.SELECTING_INGREDIENTS: [
-                    MessageHandler(callback=recipes_handler.ingredients_selected, filters=Filters.text)
-                ],
-                bot_states.SELECTING_ORIGIN: [
-                    CallbackQueryHandler(callback=recipes_handler.origin_selected)
-                ]
-            },
-            fallbacks=[]
-        ))
+        dispatcher.add_handler(RecipesConversationHandler())
 
     def start(self):
         print("Recipes bot starting ...")
