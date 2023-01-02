@@ -194,12 +194,9 @@ class RecipesConversationHandler(ConversationHandler):
 """
     
     def step_buttons(self, step: Step):
-        buttons = []
+        buttons = [[self.back_button()]]
         if step.next is not None:
             buttons.append([InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT)])
         if step.prev is not None:
             buttons.append([InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV)])
-        return InlineKeyboardMarkup([
-            *buttons,
-            [self.back_button()],
-        ])
+        return InlineKeyboardMarkup(buttons)
