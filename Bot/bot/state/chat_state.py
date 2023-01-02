@@ -1,5 +1,4 @@
-from model.country import Country
-from model.recipe import Recipe
+from ontology.model import *
 from telegram import (Message, ReplyMarkup)
 from telegram.ext import CallbackContext
 
@@ -33,6 +32,16 @@ class ChatState:
     def get_selected_recipe(self) -> Recipe | None:
         return self.selected_recipe
 
+    def change_step(self, step: Step, index: int):
+        self.step_index = index
+        self.current_step = step
+    
+    def get_step_index(self) -> int:
+        return self.step_index
+    
+    def get_current_step(self) -> Step:
+        return self.current_step
+
     def push_message(self, context: CallbackContext, text: str, parse_mode: str | None = None, reply_markup: ReplyMarkup | None = None):
         message = context.bot.send_message(
             self.id,
@@ -54,3 +63,4 @@ class ChatState:
         self.ingredients = []
         self.recipes = []
         self.selected_recipe = None
+        self.step_index = 0

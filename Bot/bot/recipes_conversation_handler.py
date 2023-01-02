@@ -6,6 +6,7 @@ from bot import bot_states
 from bot import bot_events
 from bot.state.chat_state import ChatState
 from ontology.recipes_ontology import RecipesOntology
+from ontology.model import *
 from typing import Callable
 
 class RecipesConversationHandler(ConversationHandler):
@@ -37,7 +38,9 @@ class RecipesConversationHandler(ConversationHandler):
                     CallbackQueryHandler(callback=self.with_chat_state(self.view_recipe_steps), pattern=bot_events.VIEW_STEPS),
                 ],
                 bot_states.VIEWING_STEPS: [
-
+                    CallbackQueryHandler(callback=self.with_chat_state(self.next_step), pattern=bot_events.NEXT),
+                    CallbackQueryHandler(callback=self.with_chat_state(self.prev_step), pattern=bot_events.PREV),
+                    CallbackQueryHandler(callback=self.go_back(bot_states.VIEWING_RECIPE), pattern=bot_events.BACK),
                 ]
             },
             fallbacks=[]
@@ -82,7 +85,6 @@ class RecipesConversationHandler(ConversationHandler):
         def go_back_impl(chat_state: ChatState):
             chat_state.pop_message()
             return state
-        
         return self.with_chat_state(lambda s, u, c: go_back_impl(s))
 
     def request_ingredients(self, chat_state: ChatState, update: Update, context: CallbackContext):
@@ -156,4 +158,48 @@ class RecipesConversationHandler(ConversationHandler):
         return InlineKeyboardButton(text="Go back", callback_data=bot_events.BACK)
     
     def view_recipe_steps(self, chat_state: ChatState, update: Update, context: CallbackContext):
+        update.callback_query.answer()
+        recipe = chat_state.get_selected_recipe()
+        step = self.ontology.find_step(recipe.initialStep)
+        chat_state.change_step(step, 0)
+        chat_state.push_message(
+            context,
+            self.create_step_text(step, 0),
+            reply_markup=self.step_buttons(step),
+            parse_mode=ParseMode.MARKDOWN_V2
+        )
         return bot_states.VIEWING_STEPS
+    
+    def next_step(self, chat_state: ChatState, update: Update, context: CallbackContext):
+        return self.change_step(chat_state, update, lambda s : s.next, lambda x: x + 1)
+
+    def prev_step(self, chat_state: ChatState, update: Update, context: CallbackContext):
+        return self.change_step(chat_state, update, lambda s : s.prev, lambda x: x - 1)
+
+    def change_step(self, chat_state: ChatState, update: Update, get_step_id: Callable[[Step], int], update_index: Callable[[int], int]):
+        update.callback_query.answer()
+        step_id = get_step_id(chat_state.get_current_step())
+        index = update_index(chat_state.get_step_index())
+        step = self.ontology.find_step(step_id)
+        chat_state.change_step(step, index)
+        chat_state.last_message().edit_text(self.create_step_text(step, index), parse_mode=ParseMode.MARKDOWN_V2)
+        chat_state.last_message().edit_reply_markup(self.step_buttons(step))
+        return bot_states.VIEWING_STEPS
+    
+    def create_step_text(self, step: Step, index: int) -> str:
+        return f"""
+*Step {index}*
+
+{step.description}
+"""
+    
+    def step_buttons(self, step: Step):
+        buttons = []
+        if step.next is not None:
+            buttons.append([InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT)])
+        if step.prev is not None:
+            buttons.append([InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV)])
+        return InlineKeyboardMarkup([
+            *buttons,
+            [self.back_button()],
+        ])

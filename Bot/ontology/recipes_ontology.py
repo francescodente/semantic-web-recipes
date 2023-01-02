@@ -1,6 +1,5 @@
 from bot.state.chat_state import ChatState
-from model.recipe import Recipe
-from model.country import Country
+from ontology.model import *
 
 class RecipesOntology:
     def __init__(self):
@@ -16,6 +15,9 @@ class RecipesOntology:
     
     def find_recipes(self, chat_state: ChatState) -> list[Recipe]:
         return [
-            Recipe("Carbonara"),
-            Recipe("Pesto"),
+            Recipe("Carbonara", 0),
+            Recipe("Pesto", 0),
         ]
+    
+    def find_step(self, id: int) -> Step:
+        return Step(f"Step {id}", id + 1 if id < 5 else None, id - 1 if id > 0 else None)
