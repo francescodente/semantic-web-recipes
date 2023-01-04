@@ -1,13 +1,12 @@
 from telegram import *
 from telegram.ext import *
 
-from bot import bot_states
-from bot import bot_events
+from ontology.recipes_ontology import RecipesOntology
 
 from bot.recipes_conversation_handler import RecipesConversationHandler
 
 class TelegramBot:
-    def __init__(self, token):
+    def __init__(self, token, ontology: RecipesOntology):
         self.updater = Updater(token, use_context=True)
 
         dispatcher = self.updater.dispatcher
@@ -15,7 +14,7 @@ class TelegramBot:
         dispatcher.add_handler(CommandHandler('start', callback=self.start_cmd))
         dispatcher.add_handler(CommandHandler('help', callback=self.help_cmd))
 
-        dispatcher.add_handler(RecipesConversationHandler())
+        dispatcher.add_handler(RecipesConversationHandler(ontology))
 
     def start(self):
         print("Recipes bot starting ...")
@@ -28,7 +27,9 @@ class TelegramBot:
 
     def help_cmd(self, update: Update, context: CallbackContext):
         update.message.reply_text(
-            """/start -> starts the bot
-        /help -> lists the commands
-        /recipe -> chooses a recipe"""
+            """
+/start -> starts the bot
+/help -> lists the commands
+/recipe -> chooses a recipe
+"""
         )

@@ -1,6 +1,9 @@
 from bot.telegram_bot import TelegramBot
 import os
 
+from ontology.recipes_ontology import RecipesOntology
+
 token = os.getenv("TOKEN")
-bot = TelegramBot(token)
+ontology_iri = os.getenv("ONTOLOGY_IRI")
+bot = TelegramBot(token, RecipesOntology(ontology_iri))
 bot.start()
