@@ -1,16 +1,19 @@
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MainClass {
 
     public static void main(String[] args) {
-        String path = System.getProperty("user.dir")+ "\\" +"src\\main\\resources\\recipes\\" + "recipe1.txt";
-        System.out.println(path);
+        String folderPath = System.getProperty("user.dir")+ "\\" +"src\\main\\resources\\recipes";
         RecipeReader reader = new RecipeReader();
-        Recipe recipe = reader.read(path);
-        System.out.println("Origin: " + recipe.getOrigin());
-        System.out.println("Time: " + recipe.getCookingTime());
-        System.out.println("Ingredients:\n " + recipe.getIngredients());
+        List<Recipe> recipes = new ArrayList<>();
+        File folder = new File(folderPath);
 
-        recipe.getSteps().forEach(step-> System.out.println("Step\n" + step + "\n"));
-
+        Arrays.stream(Objects.requireNonNull(folder.listFiles()))
+                .filter(file -> file.getName().endsWith(".txt"))
+                .forEach(file -> recipes.add(reader.read(file.getPath())));
+        recipes.forEach(recipe-> System.out.println(recipe.getTitle()));
     }
 }

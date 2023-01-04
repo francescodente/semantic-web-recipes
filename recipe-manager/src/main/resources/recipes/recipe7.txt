@@ -14,10 +14,15 @@ Time
 60
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+Difficulty
+Easy
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
 Ingredients
 1 unit eggplant
 
-0.5 teaspoon salt 
+0.5 teaspoon salt
 
 0.25 cup olive oil
 
