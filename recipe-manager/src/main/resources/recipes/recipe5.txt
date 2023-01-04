@@ -15,6 +15,11 @@ Time
 40
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+Difficulty
+Hard
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
 Ingredients
 0.5 teaspoon salt
 
@@ -40,7 +45,7 @@ Ingredients
 
 1 units sliced onion
 
-1 unit julienned green bell pepper 
+1 unit julienned green bell pepper
 
 3 ounces sliced Swiss cheese
 

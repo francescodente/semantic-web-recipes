@@ -4,10 +4,11 @@ public class Recipe {
     private String dish;
     private String title;
     private Integer cookingTime;
+    private String difficulty;
     private List<Ingredient> ingredients;
     private List<String> steps;
 
-    public Recipe(String dish, String title,String origin, Integer cookingTime, List<Ingredient> ingredients, List<String> steps) {
+    public Recipe(String dish, String title, String origin, Integer cookingTime, String difficulty, List<Ingredient> ingredients, List<String> steps) {
         super();
         this.origin = origin;
         this.cookingTime = cookingTime;
@@ -15,8 +16,12 @@ public class Recipe {
         this.steps = steps;
         this.dish = dish;
         this.title = title;
+        this.difficulty = difficulty;
     }
 
+    public String getDifficulty() {
+        return difficulty;
+    }
     public String getOrigin() {
         return origin;
     }

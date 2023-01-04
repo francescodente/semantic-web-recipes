@@ -14,10 +14,14 @@ Time
 20
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+Difficulty
+Medium
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 Ingredients
 8 slices rye bread
 
-½ cup Thousand Island dressing
+0.5 cup Thousand Island dressing
 
 8 slices Swiss cheese
 
