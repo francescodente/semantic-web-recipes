@@ -65,10 +65,10 @@ class RecipesConversationHandler(ConversationHandler):
         return self.chat_states[chat_id]
     
     def main_menu_markup(self, chat_state: ChatState) -> InlineKeyboardMarkup:
-        selected_country = chat_state.get_selected_country()
+        selected_country = chat_state.selected_country
         selected_country_text = selected_country if selected_country else "None selected"
 
-        ingredients = chat_state.get_selected_ingredients()
+        ingredients = chat_state.selected_ingredients
         selected_ingredients_text = ", ".join(ingredients) if len(ingredients) > 0 else "None selected"
 
         return InlineKeyboardMarkup([
@@ -178,7 +178,7 @@ class RecipesConversationHandler(ConversationHandler):
             return "\n".join(map(show_ingredient, ingredients))
             
         update.callback_query.answer()
-        dish = chat_state.get_selected_dish()
+        dish = chat_state.selected_dish
         recipe = dish.find_recipe(update.callback_query.data)
         chat_state.set_selected_recipe(recipe)
         ingredients = self.ontology.find_recipe_ingredients(recipe.iri)
