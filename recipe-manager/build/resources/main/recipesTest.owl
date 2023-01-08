@@ -1,0 +1,35 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.0="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Lumpia">
+    <j.0:hasRecipe rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#TraditionalFilipinoLumpia"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasRecipe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#TraditionalFilipinoLumpia">
+    <j.0:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</j.0:hasPreparationTimeInMinutes>
+    <j.0:hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalFilipinoLumpia</j.0:hasTitle>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Recipe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Recipe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasPreparationTimeInMinutes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Recipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Recipe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

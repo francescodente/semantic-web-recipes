@@ -1,4 +1,7 @@
 import java.util.List;
+
+import static java.lang.String.valueOf;
+
 public class Recipe {
     private String origin;
     private String dish;
@@ -28,7 +31,12 @@ public class Recipe {
     public String getDish() {
         return dish;
     }
-
+    public String getIDName() {
+        return this.getTitle()
+                .replaceAll(" ", "")
+                .replaceAll("\\(", "")
+                .replaceAll("\\)", "");
+    }
     public String getTitle() {
         return title;
     }
