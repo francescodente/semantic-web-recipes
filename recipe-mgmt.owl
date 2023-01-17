@@ -1,1278 +1,373 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://www.semanticweb.org/it/unibo/semantic-web/recipes"
      xml:base="http://www.semanticweb.org/it/unibo/semantic-web/recipes"
+     xmlns:wd="http://www.wikidata.org/entity/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wdt="http://www.wikidata.org/prop/direct/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/it/unibo/semantic-web/recipes">
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="recipes" IRI="http://www.semanticweb.org/it/unibo/semantic-web/recipes#"/>
-    <Import>http://purl.org/heals/foodon/</Import>
-    <Import>https://www.w3.org/Consortium/Offices/Presentations/RDFTutorial/rdfs/Countries.owl</Import>
-    <Declaration>
-        <Class IRI="http://purl.org/heals/food/Food"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dish"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Ingredient"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#IngredientWithQuantity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Quantity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Recipe"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Step"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#containsIngredient"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#happensAfter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#happensBefore"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasIngredient"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasIngredientWithQuantity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasInitialStep"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasNext"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasOrigin"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPrevious"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasQuantity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasRecipe"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasStep"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isIngredientOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isRecipeFor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDescription"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDifficulty"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasInstructions"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasTitle"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#BakingPowder"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#BasicPancakes"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Clove"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Cup"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Flour"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Grams"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#LeekPotatoSoup"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Millilitres"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_Cook"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_PreheatOven"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pancakes"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Sugar"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Tablespoon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Teaspoon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ToServe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Unit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VeganPLSoup_Serve"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VegetableStock"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#breadToServe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#butter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#chicken_egg"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#chives"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#chivesToServe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#cow_milk"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#crustyBread"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#garlic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#leek"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#potatoes"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#rapeseedOil"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#salt"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#unsweetenedAlmondMilk"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1CupFlour"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1CupMilk"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1Egg"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1TablespnRapeseedOil"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1cup"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1tablespoon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1toserve"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1unit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1/2TeaspnSalt"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#1/2teaspoon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2GarlicCloves"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2TablespnButter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2TablespnSugar"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2TeaspnBakingPowder"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2cloves"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2tablespoons"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#2teaspoons"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500gLeeks"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500gPotatoes"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500grams"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500ml"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500mlAlmondMilk"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#500mlVegetableStock"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VeganPLSoup_Wash&amp;Cut"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-    </Declaration>
-    <Declaration>
-        <Datatype IRI="#difficulty"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="http://purl.org/heals/food/Food"/>
-        <Class IRI="#Ingredient"/>
-    </EquivalentClasses>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400765"/>
-        <NamedIndividual IRI="#BakingPowder"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Recipe"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Clove"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Cup"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400759"/>
-        <NamedIndividual IRI="#Flour"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Grams"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Recipe"/>
-        <NamedIndividual IRI="#LeekPotatoSoup"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Millilitres"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_Cook"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_PreheatOven"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Dish"/>
-        <NamedIndividual IRI="#Pancakes"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400765"/>
-        <NamedIndividual IRI="#Sugar"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Tablespoon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Teaspoon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#ToServe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#MeasurementUnit"/>
-        <NamedIndividual IRI="#Unit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#VeganPLSoup_Serve"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400765"/>
-        <NamedIndividual IRI="#VegetableStock"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#breadToServe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400773"/>
-        <NamedIndividual IRI="#butter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400744"/>
-        <NamedIndividual IRI="#chicken_egg"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400688"/>
-        <NamedIndividual IRI="#chives"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#chivesToServe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400740"/>
-        <NamedIndividual IRI="#cow_milk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400765"/>
-        <NamedIndividual IRI="#crustyBread"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400674"/>
-        <NamedIndividual IRI="#garlic"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400674"/>
-        <NamedIndividual IRI="#leek"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400681"/>
-        <NamedIndividual IRI="#potatoes"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400763"/>
-        <NamedIndividual IRI="#rapeseedOil"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400689"/>
-        <NamedIndividual IRI="#salt"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.obolibrary.org/obo/FOODON_03400765"/>
-        <NamedIndividual IRI="#unsweetenedAlmondMilk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#1CupFlour"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#1CupMilk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#1Egg"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#1TablespnRapeseedOil"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#1cup"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#1tablespoon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#1toserve"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#1unit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#1/2TeaspnSalt"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#1/2teaspoon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#2GarlicCloves"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#2TablespnButter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#2TablespnSugar"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#2TeaspnBakingPowder"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#2cloves"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#2tablespoons"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#2teaspoons"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#500gLeeks"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#500gPotatoes"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#500grams"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Quantity"/>
-        <NamedIndividual IRI="#500ml"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#500mlAlmondMilk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#IngredientWithQuantity"/>
-        <NamedIndividual IRI="#500mlVegetableStock"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Step"/>
-        <NamedIndividual IRI="#VeganPLSoup_Wash&amp;Cut"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInitialStep"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-        <NamedIndividual IRI="#Pancake_PreheatOven"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#Pancake_Cook"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#Pancake_PreheatOven"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasOrigin"/>
-        <NamedIndividual IRI="#Pancakes"/>
-        <NamedIndividual IRI="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRecipe"/>
-        <NamedIndividual IRI="#Pancakes"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-        <NamedIndividual IRI="#VeganPLSoup_Serve"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-        <NamedIndividual IRI="#VeganPLSoup_Wash&amp;Cut"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <NamedIndividual IRI="#VeganPLSoup_Serve"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#breadToServe"/>
-        <NamedIndividual IRI="#breadToServe"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#breadToServe"/>
-        <NamedIndividual IRI="#1toserve"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#butter"/>
-        <NamedIndividual IRI="#Flour"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#chivesToServe"/>
-        <NamedIndividual IRI="#chives"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#chivesToServe"/>
-        <NamedIndividual IRI="#1toserve"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#1CupFlour"/>
-        <NamedIndividual IRI="#Flour"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#1CupFlour"/>
-        <NamedIndividual IRI="#1cup"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#1CupMilk"/>
-        <NamedIndividual IRI="#cow_milk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#1CupMilk"/>
-        <NamedIndividual IRI="#1cup"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#1Egg"/>
-        <NamedIndividual IRI="#chicken_egg"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#1Egg"/>
-        <NamedIndividual IRI="#1unit"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#1TablespnRapeseedOil"/>
-        <NamedIndividual IRI="#rapeseedOil"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#1TablespnRapeseedOil"/>
-        <NamedIndividual IRI="#1tablespoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#1cup"/>
-        <NamedIndividual IRI="#Cup"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#1tablespoon"/>
-        <NamedIndividual IRI="#Tablespoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#1toserve"/>
-        <NamedIndividual IRI="#ToServe"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#1unit"/>
-        <NamedIndividual IRI="#Unit"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#1/2TeaspnSalt"/>
-        <NamedIndividual IRI="#salt"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#1/2TeaspnSalt"/>
-        <NamedIndividual IRI="#1/2teaspoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#1/2teaspoon"/>
-        <NamedIndividual IRI="#Teaspoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#2GarlicCloves"/>
-        <NamedIndividual IRI="#garlic"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#2GarlicCloves"/>
-        <NamedIndividual IRI="#2cloves"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#2TablespnButter"/>
-        <NamedIndividual IRI="#butter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#2TablespnButter"/>
-        <NamedIndividual IRI="#2tablespoons"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#2TablespnSugar"/>
-        <NamedIndividual IRI="#Sugar"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#2TablespnSugar"/>
-        <NamedIndividual IRI="#2tablespoons"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#2TeaspnBakingPowder"/>
-        <NamedIndividual IRI="#BakingPowder"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#2TeaspnBakingPowder"/>
-        <NamedIndividual IRI="#2teaspoons"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#2cloves"/>
-        <NamedIndividual IRI="#Clove"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#2tablespoons"/>
-        <NamedIndividual IRI="#Tablespoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#2teaspoons"/>
-        <NamedIndividual IRI="#Teaspoon"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#500gLeeks"/>
-        <NamedIndividual IRI="#leek"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#500gLeeks"/>
-        <NamedIndividual IRI="#500grams"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#500gPotatoes"/>
-        <NamedIndividual IRI="#potatoes"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#500gPotatoes"/>
-        <NamedIndividual IRI="#500grams"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#500grams"/>
-        <NamedIndividual IRI="#Grams"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <NamedIndividual IRI="#500ml"/>
-        <NamedIndividual IRI="#Millilitres"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#500mlAlmondMilk"/>
-        <NamedIndividual IRI="#unsweetenedAlmondMilk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#500mlAlmondMilk"/>
-        <NamedIndividual IRI="#500ml"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <NamedIndividual IRI="#500mlVegetableStock"/>
-        <NamedIndividual IRI="#VegetableStock"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <NamedIndividual IRI="#500mlVegetableStock"/>
-        <NamedIndividual IRI="#500ml"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNext"/>
-        <NamedIndividual IRI="#VeganPLSoup_Wash&amp;Cut"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDifficulty"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-        <Literal xml:lang="en">easy</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-        <Literal xml:lang="en">20</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTitle"/>
-        <NamedIndividual IRI="#BasicPancakes"/>
-        <Literal xml:lang="en">Pancakes</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDifficulty"/>
-        <NamedIndividual IRI="#LeekPotatoSoup"/>
-        <Literal xml:lang="en">medium</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-        <NamedIndividual IRI="#LeekPotatoSoup"/>
-        <Literal xml:lang="en">35</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTitle"/>
-        <NamedIndividual IRI="#LeekPotatoSoup"/>
-        <Literal xml:lang="en">Vegan leek &amp; potato soup</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_Cook"/>
-        <Literal xml:lang="en">Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You&apos;ll have 12 to 15 pancakes.) Serve warm, with desired toppings.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_Mix"/>
-        <Literal xml:lang="en">In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_Mix2"/>
-        <Literal xml:lang="en">In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine).</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_PreheatOven"/>
-        <Literal xml:lang="en">Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_SpreadBatter"/>
-        <Literal xml:lang="en">For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet).</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#Pancake_ToolPrep"/>
-        <Literal xml:lang="en">Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#VeganPLSoup_Blend"/>
-        <Literal xml:lang="en">Pour in the almond milk, then remove from the heat and blitz using a hand blender until almost smooth, with a slightly chunky texture. Or, if you prefer, blitz until completely smooth.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#VeganPLSoup_Cook"/>
-        <Literal xml:lang="en">Heat the oil in a large pan over a medium heat and fry the garlic and leeks, stirring, until the veg has started to soften. Add the potatoes and stock, then cover and simmer for 15 mins until the leeks and potatoes are soft.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#VeganPLSoup_Serve"/>
-        <Literal xml:lang="en">Reheat over a low heat if needed, then ladle into bowls and scatter with chives, drizzle with a little oil and serve with bread, if you like. Can be frozen for up to three months.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#1cup"/>
-        <Literal xml:lang="en">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#1tablespoon"/>
-        <Literal xml:lang="en">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#1toserve"/>
-        <Literal xml:lang="en">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#1unit"/>
-        <Literal xml:lang="en">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#1/2teaspoon"/>
-        <Literal xml:lang="en">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#2cloves"/>
-        <Literal xml:lang="en">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#2tablespoons"/>
-        <Literal xml:lang="en">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#2teaspoons"/>
-        <Literal xml:lang="en">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#500grams"/>
-        <Literal xml:lang="en">500</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#500ml"/>
-        <Literal xml:lang="en">500</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDescription"/>
-        <NamedIndividual IRI="#VeganPLSoup_Wash&amp;Cut"/>
-        <Literal xml:lang="en">Chop the garlic cloves, wash the potatoes and cut them into cubes. Thinly slice the leakes.</Literal>
-    </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#containsIngredient"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#happensAfter"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#happensBefore"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasIngredientWithQuantity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasInitialStep"/>
-        <ObjectProperty IRI="#hasStep"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasNext"/>
-        <ObjectProperty IRI="#happensBefore"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasOrigin"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <ObjectProperty IRI="#happensAfter"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasRecipe"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasStep"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isIngredientOf"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isRecipeFor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#containsIngredient"/>
-        <ObjectProperty IRI="#isIngredientOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasNext"/>
-        <ObjectProperty IRI="#hasPrevious"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasRecipe"/>
-        <ObjectProperty IRI="#isRecipeFor"/>
-    </InverseObjectProperties>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasDescription"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#isRecipeFor"/>
-    </FunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="#hasInitialStep"/>
-    </InverseFunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="#hasRecipe"/>
-    </InverseFunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="#hasStep"/>
-    </InverseFunctionalObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#happensAfter"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#happensBefore"/>
-    </TransitiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#happensAfter"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#happensBefore"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#hasNext"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#hasPrevious"/>
-    </IrreflexiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#containsIngredient"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#happensAfter"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#happensBefore"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDescription"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <Class IRI="#IngredientWithQuantity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasIngredientWithQuantity"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasInitialStep"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <Class IRI="#Quantity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasNext"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasOrigin"/>
-        <Class IRI="#Dish"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <Class IRI="#IngredientWithQuantity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasRecipe"/>
-        <Class IRI="#Dish"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasStep"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isIngredientOf"/>
-        <Class IRI="#Ingredient"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isRecipeFor"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#containsIngredient"/>
-        <Class IRI="#Ingredient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#happensAfter"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#happensBefore"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasIngredient"/>
-        <Class IRI="#Ingredient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasIngredientWithQuantity"/>
-        <Class IRI="#IngredientWithQuantity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInitialStep"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMeasurementUnit"/>
-        <Class IRI="#MeasurementUnit"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasNext"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasOrigin"/>
-        <Class IRI="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Country"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPrevious"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasQuantity"/>
-        <Class IRI="#Quantity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRecipe"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasStep"/>
-        <Class IRI="#Step"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isIngredientOf"/>
-        <Class IRI="#Recipe"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isRecipeFor"/>
-        <Class IRI="#Dish"/>
-    </ObjectPropertyRange>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="#hasIngredientWithQuantity"/>
-            <ObjectProperty IRI="#hasIngredient"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#containsIngredient"/>
-    </SubObjectPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasInstructions"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasValue"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasDescription"/>
-    </FunctionalDataProperty>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasDifficulty"/>
-        <Class IRI="#Recipe"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-        <Class IRI="#Recipe"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasValue"/>
-        <Class IRI="#Quantity"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDescription"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDifficulty"/>
-        <Datatype IRI="#difficulty"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasInstructions"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasPreparationTimeInMinutes"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasTitle"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasValue"/>
-        <Datatype abbreviatedIRI="owl:real"/>
-    </DataPropertyRange>
-    <DatatypeDefinition>
-        <Datatype IRI="#difficulty"/>
-        <DataOneOf>
-            <Literal>easy</Literal>
-            <Literal>hard</Literal>
-            <Literal>medium</Literal>
-        </DataOneOf>
-    </DatatypeDefinition>
-</Ontology>
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:SpecificationMetadata1="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes">
+        <owl:imports rdf:resource="http://purl.org/heals/foodon/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>easy</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>hard</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#containsIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#containsIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredientWithQuantity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredient"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensBefore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredientWithQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredientWithQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasInitialStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasInitialStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasMeasurementUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasMeasurementUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasNext">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensBefore"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPrevious"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPrevious -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPrevious">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensAfter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasRecipe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#countryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#countryName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDifficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDifficulty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPreparationTimeInMinutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPreparationTimeInMinutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasTitle">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/heals/food/Food -->
+
+    <owl:Class rdf:about="http://purl.org/heals/food/Food">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+</rdf:RDF>
 
 
 

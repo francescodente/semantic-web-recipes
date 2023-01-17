@@ -7,7 +7,7 @@ class ChatState:
         self.id: int = id
         self.messages_stack: list[Message] = []
         self.countries: list[Country] = []
-        self.selected_country: int | None = None
+        self.selected_country: Country | None = None
         self.selected_ingredients: list[Ingredient] = []
         self.search_result: list[Dish] = []
         self.selected_dish: Dish = None
@@ -26,8 +26,8 @@ class ChatState:
     def set_search_result(self, dishes: list[Dish]):
         self.search_result = dishes
     
-    def get_dish_from_search_result(self, iri: str) -> Dish:
-        return next(d for d in self.search_result if d.iri == iri)
+    def get_dish_from_search_result(self, index: int) -> Dish:
+        return self.search_result[index]
     
     def set_selected_dish(self, dish: Dish):
         self.selected_dish = dish

@@ -1,0 +1,12 @@
+PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/countries#>
+
+CONSTRUCT
+{
+  ?country a :Country ;
+    rdfs:label ?countryLabel .
+}
+WHERE
+{
+  ?country wdt:P31 wd:Q6256 .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}

@@ -5,74 +5,97 @@ from datetime import timedelta
 from owlready2 import *
 
 class RecipesOntology:
-    def __init__(self, ontology_iri):
-        self.world = World()
-        self.world.get_ontology(ontology_iri).load()
-        # sync_reasoner(self.world)
-
-    def __add_condition(self, where_clause: str, filter: str) -> str:
-        return f"{where_clause}\n{filter}"
+    def __init__(self, world: World):
+        self.world = world
 
     def get_countries_with_at_least_one_dish(self) -> list[Country]:
         query = """
-            PREFIX c: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#>
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
 
             SELECT DISTINCT ?country ?name (COUNT(?recipe) AS ?n)
             WHERE
             {
-                ?country a/rdfs:subClassOf* c:Country .
+                ?country a/rdfs:subClassOf* :Country .
                 ?country ^:hasOrigin/:hasRecipe ?recipe .
-                ?country c:nameEnglish ?name .
+                ?country :countryName ?name .
             }
-            GROUP BY ?name
+            GROUP BY ?country ?name
             ORDER BY ?name
         """
         return [Country(country.iri, name, count) for country, name, count in self.world.sparql(query)]
     
     def find_dishes(self, chat_state: ChatState) -> list[Dish]:
         where_clause = ""
-        args = []
+        params = []
 
-        def add_condition(condition):
-            where_clause += f"\n{condition}"
+        def add_condition(where_clause, condition):
+            return f"{where_clause}\n{condition}"
 
-        if chat_state.get_selected_country() is not None:
-            add_condition("?recipe :hasOrigin ?? .")
-            args.append(chat_state.get_selected_country)
+        if chat_state.selected_country is not None:
+            where_clause = add_condition(where_clause, f"?dish :hasOrigin <{chat_state.selected_country.iri}> .")
         
-        for i, ingredient in enumerate(chat_state.get_selected_ingredients()):
+        for i, ingredient in enumerate(chat_state.selected_ingredients):
             param_name = f"?ingr{i}"
-            add_condition(f"""?recipe :hasIngredient/rdfs:label {param_name} FILTER REGEX({param_name}, ".*({ingredient}).*", "i") .""")
+            where_clause = add_condition(where_clause, f"""?recipe :containsIngredient/rdfs:label {param_name} FILTER({param_name} = ??) .""")
+            params.append(ingredient)
 
         query = f"""
-            PREFIX c: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#>
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
 
-            SELECT ?dish ?dishName ?recipe ?title ?prepTime ?initialStep
+            SELECT ?dish ?dishName ?recipe ?title ?prepTime ?initialStep ?difficulty
             WHERE
             {{
                 ?dish :hasRecipe ?recipe .
-                ?dish rdfs:label ?dishName
+                ?dish rdfs:label ?dishName .
                 ?recipe :hasTitle ?title .
                 ?recipe :hasPreparationTimeInMinutes ?prepTime .
                 ?recipe :hasInitialStep ?initialStep .
+                ?recipe :hasDifficulty ?difficulty .
                 {where_clause}
             }}
         """
 
         dishes: dict[str, Dish] = {}
-        for dish, dish_name, recipe, recipe_title, preparation_time, initial_step in self.world.sparql(query):
+        for dish, dish_name, recipe, recipe_title, preparation_time, initial_step, difficulty in self.world.sparql(query, params):
             if dish.iri not in dishes:
                 dishes[dish.iri] = Dish(dish.iri, dish_name, [])
-            dishes[dish.iri].recipes.append(Recipe(recipe.iri, recipe_title, timedelta(minutes=preparation_time), initial_step))
+            dishes[dish.iri].recipes.append(Recipe(recipe.iri, recipe_title, timedelta(minutes=int(preparation_time)), initial_step.iri, difficulty))
+        return list(dishes.values())
     
     def find_recipe_ingredients(self, recipe_iri: str) -> list[Ingredient]:
-        return [
-            Ingredient("Carrots", 3, "units"),
-            Ingredient("Beans", 200, "g"),
-        ]
+        query = f"""
+            PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
+        
+            SELECT ?name ?quantityValue ?unit
+            WHERE
+            {{
+                <{recipe_iri}> :hasIngredientWithQuantity ?iwq .
+                ?iwq :hasIngredient ?ingredient .
+                ?iwq :hasQuantity ?quantity .
+                ?quantity :hasValue ?quantityValue .
+                ?quantity :hasMeasurementUnit ?unit .
+                ?ingredient rdfs:label ?name .
+                ?unit rdfs:label ?unitName .
+            }}
+        """
 
+        return [Ingredient(name, quantity, unit.iri) for name, quantity, unit in self.world.sparql(query)]
     
-    def find_step(self, id: int) -> Step:
-        return Step(f"Step {id}", id + 1 if id < 5 else None, id - 1 if id > 0 else None)
+    def find_step(self, step_iri: str) -> Step:
+        query = f"""
+            PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
+
+            SELECT ?description ?prev ?next
+            WHERE
+            {{
+                <{step_iri}> :hasDescription ?description .
+                OPTIONAL {{ <{step_iri}> :hasPrevious ?prev }} .
+                OPTIONAL {{ <{step_iri}> :hasNext ?next }} .
+            }}
+        """
+
+        def iri_or_none(x):
+            return x.iri if x else None
+        
+        description, prev_step, next_step = next(self.world.sparql(query))
+        return Step(description, iri_or_none(next_step), iri_or_none(prev_step))

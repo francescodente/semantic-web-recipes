@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries" uri="https://www.w3.org/Consortium/Offices/Presentations/RDFTutorial/rdfs/Countries.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/heals/ingredient/" uri="http://purl.org/heals/ingredient"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/heals/foodon/" uri="http://purl.org/heals/foodon"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/heals/food/" uri="http://purl.org/heals/food"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1672828493597" name="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt" uri="recipe-mgmt.owl"/>
-    </group>
 </catalog>

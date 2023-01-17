@@ -9,7 +9,6 @@ class Country:
 
 @dataclass
 class Step:
-    iri: str
     description: str
     next: str | None
     prev: str | None
@@ -20,6 +19,7 @@ class Recipe:
     title: str
     preparation_time: timedelta
     initial_step: str
+    difficulty: str
 
 @dataclass
 class Ingredient:
@@ -32,6 +32,3 @@ class Dish:
     iri: str
     name: str
     recipes: list[Recipe]
-
-    def find_recipe(self, iri: str) -> Recipe:
-        return next(r for r in self.recipes if r.iri == iri)

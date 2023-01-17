@@ -1,0 +1,609 @@
+<?xml version="1" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.semanticweb.org/it/unibo/semantic-web/recipes#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#"
+	xmlns:psn="http://www.wikidata.org/prop/statement/value-normalized/"
+	xmlns:pqn="http://www.wikidata.org/prop/qualifier/value-normalized/"
+	xmlns:prn="http://www.wikidata.org/prop/reference/value-normalized/"
+	xmlns:mwapi="https://www.mediawiki.org/ontology#API/"
+	xmlns:gas="http://www.bigdata.com/rdf/gas#"
+	xmlns:wdt="http://www.wikidata.org/prop/direct/"
+	xmlns:wdtn="http://www.wikidata.org/prop/direct-normalized/"
+	xmlns:psv="http://www.wikidata.org/prop/statement/value/"
+	xmlns:ps="http://www.wikidata.org/prop/statement/"
+	xmlns:pqv="http://www.wikidata.org/prop/qualifier/value/"
+	xmlns:pq="http://www.wikidata.org/prop/qualifier/"
+	xmlns:prv="http://www.wikidata.org/prop/reference/value/"
+	xmlns:pr="http://www.wikidata.org/prop/reference/"
+	xmlns:wdno="http://www.wikidata.org/prop/novalue/"
+	xmlns:p="http://www.wikidata.org/prop/"
+	xmlns:wikibase="http://wikiba.se/ontology#"
+	xmlns:wd="http://www.wikidata.org/entity/"
+	xmlns:wdata="http://www.wikidata.org/wiki/Special:EntityData/"
+	xmlns:wds="http://www.wikidata.org/entity/statement/"
+	xmlns:wdv="http://www.wikidata.org/value/"
+	xmlns:wdref="http://www.wikidata.org/reference/"
+	xmlns:schema="http://schema.org/"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
+	xmlns:geof="http://www.opengis.net/def/geosparql/function/"
+	xmlns:mediawiki="https://www.mediawiki.org/ontology#"
+	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+	xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#">
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#BakingPowder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#BakingPowder">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#BasicPancakes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#BasicPancakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <recipes:hasInitialStep rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_PreheatOven"/>
+        <recipes:hasDifficulty>easy</recipes:hasDifficulty>
+        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</recipes:hasPreparationTimeInMinutes>
+        <recipes:hasTitle>Pancakes</recipes:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Clove -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Clove">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Cup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Cup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Flour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Flour">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400759"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Grams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Grams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#LeekPotatoSoup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#LeekPotatoSoup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <recipes:hasDifficulty>medium</recipes:hasDifficulty>
+        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</recipes:hasPreparationTimeInMinutes>
+        <recipes:hasTitle>Vegan leek &amp; potato soup</recipes:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Millilitres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Millilitres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Cook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Cook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You&apos;ll have 12 to 15 pancakes.) Serve warm, with desired toppings.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix2"/>
+        <recipes:hasDescription>In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_SpreadBatter"/>
+        <recipes:hasDescription>In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine).</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_PreheatOven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_PreheatOven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Mix"/>
+        <recipes:hasDescription>Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_SpreadBatter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_SpreadBatter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_ToolPrep"/>
+        <recipes:hasDescription>For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet).</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_ToolPrep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_ToolPrep">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancake_Cook"/>
+        <recipes:hasDescription>Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancakes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pancakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+        <recipes:hasOrigin rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"/>
+        <recipes:hasRecipe rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#BasicPancakes"/>
+        <rdfs:label>Pancakes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Sugar">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Tablespoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Tablespoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Teaspoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Teaspoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#ToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#ToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Blend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Blend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Serve"/>
+        <recipes:hasDescription>Pour in the almond milk, then remove from the heat and blitz using a hand blender until almost smooth, with a slightly chunky texture. Or, if you prefer, blitz until completely smooth.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Cook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Cook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Blend"/>
+        <recipes:hasDescription>Heat the oil in a large pan over a medium heat and fry the garlic and leeks, stirring, until the veg has started to soften. Add the potatoes and stock, then cover and simmer for 15 mins until the leeks and potatoes are soft.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Serve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Serve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Reheat over a low heat if needed, then ladle into bowls and scatter with chives, drizzle with a little oil and serve with bread, if you like. Can be frozen for up to three months.</recipes:hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VegetableStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VegetableStock">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#breadToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#breadToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#breadToServe"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1toserve"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#butter">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400773"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Flour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#chicken_egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#chicken_egg">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400744"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#chives -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#chives">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400688"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#chivesToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#chivesToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#chives"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1toserve"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#cow_milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#cow_milk">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400740"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#crustyBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#crustyBread">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#garlic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#garlic">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400674"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#leek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#leek">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400674"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#potatoes">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400681"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#rapeseedOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#rapeseedOil">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400763"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#salt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#salt">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400689"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#unsweetenedAlmondMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#unsweetenedAlmondMilk">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1CupFlour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1CupFlour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Flour"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1cup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1CupMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1CupMilk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#cow_milk"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1cup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1Egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1Egg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#chicken_egg"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1TablespnRapeseedOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1TablespnRapeseedOil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#rapeseedOil"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1tablespoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1cup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1cup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Cup"/>
+        <recipes:hasValue>1</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1tablespoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1tablespoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Tablespoon"/>
+        <recipes:hasValue>1</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1toserve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1toserve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#ToServe"/>
+        <recipes:hasValue>1</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Unit"/>
+        <recipes:hasValue>1</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1/2TeaspnSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1/2TeaspnSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#salt"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1/2teaspoon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#1/2teaspoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#1/2teaspoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Teaspoon"/>
+        <recipes:hasValue>1/2</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2GarlicCloves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2GarlicCloves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#garlic"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2cloves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TablespnButter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TablespnButter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#butter"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2tablespoons"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TablespnSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TablespnSugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Sugar"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2tablespoons"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TeaspnBakingPowder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2TeaspnBakingPowder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#BakingPowder"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2teaspoons"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2cloves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2cloves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Clove"/>
+        <recipes:hasValue>2</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2tablespoons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2tablespoons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Tablespoon"/>
+        <recipes:hasValue>2</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#2teaspoons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#2teaspoons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Teaspoon"/>
+        <recipes:hasValue>2</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500gLeeks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500gLeeks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#leek"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500grams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500gPotatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500gPotatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#potatoes"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500grams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500grams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500grams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Grams"/>
+        <recipes:hasValue>500</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
+        <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Millilitres"/>
+        <recipes:hasValue>500</recipes:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500mlAlmondMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500mlAlmondMilk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#unsweetenedAlmondMilk"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500ml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#500mlVegetableStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500mlVegetableStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
+        <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VegetableStock"/>
+        <recipes:hasQuantity rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#500ml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Wash&amp;Cut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Wash&amp;Cut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasNext rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganPLSoup_Cook"/>
+        <recipes:hasDescription>Chop the garlic cloves, wash the potatoes and cut them into cubes. Thinly slice the leakes.</recipes:hasDescription>
+    </owl:NamedIndividual>
+</rdf:RDF>

@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.semanticweb.org/it/unibo/semantic-web/recipes#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#"
+	xmlns:psn="http://www.wikidata.org/prop/statement/value-normalized/"
+	xmlns:pqn="http://www.wikidata.org/prop/qualifier/value-normalized/"
+	xmlns:prn="http://www.wikidata.org/prop/reference/value-normalized/"
+	xmlns:mwapi="https://www.mediawiki.org/ontology#API/"
+	xmlns:gas="http://www.bigdata.com/rdf/gas#"
+	xmlns:wdt="http://www.wikidata.org/prop/direct/"
+	xmlns:wdtn="http://www.wikidata.org/prop/direct-normalized/"
+	xmlns:psv="http://www.wikidata.org/prop/statement/value/"
+	xmlns:ps="http://www.wikidata.org/prop/statement/"
+	xmlns:pqv="http://www.wikidata.org/prop/qualifier/value/"
+	xmlns:pq="http://www.wikidata.org/prop/qualifier/"
+	xmlns:prv="http://www.wikidata.org/prop/reference/value/"
+	xmlns:pr="http://www.wikidata.org/prop/reference/"
+	xmlns:wdno="http://www.wikidata.org/prop/novalue/"
+	xmlns:p="http://www.wikidata.org/prop/"
+	xmlns:wikibase="http://wikiba.se/ontology#"
+	xmlns:wd="http://www.wikidata.org/entity/"
+	xmlns:wdata="http://www.wikidata.org/wiki/Special:EntityData/"
+	xmlns:wds="http://www.wikidata.org/entity/statement/"
+	xmlns:wdv="http://www.wikidata.org/value/"
+	xmlns:wdref="http://www.wikidata.org/reference/"
+	xmlns:schema="http://schema.org/"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
+	xmlns:geof="http://www.opengis.net/def/geosparql/function/"
+	xmlns:mediawiki="https://www.mediawiki.org/ontology#"
+	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+	xmlns:dct="http://purl.org/dc/terms/">
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q2988343">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Portuguese Malacca</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q907112">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Transnistria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1147441">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">British North Borneo</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q244165">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Republic of Artsakh</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q756617">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kingdom of Denmark</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q146761">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Hatay State</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1063498">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">United States of the Ionian Islands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1415162">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Garðaríki</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q2578028">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">misl</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q142417">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kingdom of Valencia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q114318324">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kherson State</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q114318415">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Zaporozhye State</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q801">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Israel</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q819">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Laos</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q863">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Tajikistan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q869">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Thailand</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q878">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">United Arab Emirates</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q916">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Angola</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q912">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mali</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1044">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Sierra Leone</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1049">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Sudan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q3908">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Galicia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1045">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Somalia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q810">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Jordan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q865">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Taiwan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q986">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Eritrea</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q977">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Djibouti</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q822">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Lebanon</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q889">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Afghanistan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q902">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Bangladesh</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1030">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Namibia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q811">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Nicaragua</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q965">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Burkina Faso</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1028">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Morocco</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q843">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Pakistan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q842">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Oman</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q971">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Republic of the Congo</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1033">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Nigeria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q858">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Syria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q800">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Costa Rica</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q884">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">South Korea</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q796">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Iraq</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q846">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Qatar</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1014">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Liberia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q837">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Nepal</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1036">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Uganda</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q948">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Tunisia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q26273">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Sint Maarten</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1032">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Niger</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q805">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Yemen</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1009">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cameroon</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q5705">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Catalonia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q21203">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Aruba</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q962">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Benin</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1013">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Lesotho</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q945">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Togo</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1042">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Seychelles</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1020">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Malawi</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q836">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Myanmar</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q881">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Vietnam</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1037">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Rwanda</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1019">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Madagascar</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q854">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Sri Lanka</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1016">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Libya</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1041">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Senegal</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1025">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mauritania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q917">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Bhutan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q851">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Saudi Arabia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q929">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Central African Republic</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1006">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Guinea</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1007">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Guinea-Bissau</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1246">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kosovo</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1005">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">The Gambia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q970">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Comoros</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q874">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Turkmenistan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q928">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Philippines</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1011">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cape Verde</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q963">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Botswana</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q954">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Zimbabwe</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q967">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Burundi</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1029">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mozambique</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34754">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Somaliland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q921">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Brunei</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1039">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">São Tomé and Príncipe</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1008">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Ivory Coast</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q924">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Tanzania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q974">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Democratic Republic of the Congo</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q26988">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cook Islands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q205718">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Zirid Dynasty</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q6037274">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mosquitia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q953">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Zambia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q813">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kyrgyzstan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34020">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Niue</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q826">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Maldives</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q115166787">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Reman</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q958">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">South Sudan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q16644">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Northern Mariana Islands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q29999">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kingdom of the Netherlands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q298">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Chile</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q398">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Bahrain</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q686">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Vanuatu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q697">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Nauru</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q45">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Portugal</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q155">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Brazil</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q148">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">People's Republic of China</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q183">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Germany</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q233">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Malta</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q672">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Tuvalu</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q96">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mexico</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q218">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Romania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q43">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Turkey</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q33">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Finland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q241">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cuba</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q25">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Wales</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q191">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Estonia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q408">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Australia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q40">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Austria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q77">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Uruguay</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q664">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">New Zealand</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q39">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Switzerland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q419">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Peru</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q784">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Dominica</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q414">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Argentina</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q222">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Albania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q184">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Belarus</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q766">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Jamaica</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q38">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Italy</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q28">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Hungary</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q219">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Bulgaria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q736">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Ecuador</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q733">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Paraguay</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q114">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kenya</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q55">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Netherlands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q142">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">France</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q750">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Bolivia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q683">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Samoa</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Sweden</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q657">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Chad</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q668">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">India</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Denmark</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q41">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Greece</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q783">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Honduras</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q769">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Grenada</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q236">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Montenegro</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q717">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Venezuela</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q17">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Japan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q213">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Czech Republic</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q79">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Egypt</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q16">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Canada</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q20">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Norway</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q739">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Colombia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q774">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Guatemala</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q36">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Poland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q424">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cambodia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q258">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">South Africa</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q214">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Slovakia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q754">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Trinidad and Tobago</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q145">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q215">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Slovenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q794">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Iran</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q229">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Cyprus</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q211">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Latvia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q37">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Lithuania</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q224">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Croatia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q790">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Haiti</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q399">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Armenia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q228">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Andorra</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q760">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Saint Lucia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q792">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">El Salvador</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q159">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Russia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q691">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Papua New Guinea</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q334">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Singapore</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q786">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Dominican Republic</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q711">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Mongolia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q252">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Indonesia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q232">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kazakhstan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q189">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Iceland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q115">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Ethiopia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q685">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Solomon Islands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q347">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Liechtenstein</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q695">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Palau</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q262">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Algeria</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q702">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Federated States of Micronesia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q710">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Kiribati</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q30">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">United States of America</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q734">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Guyana</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q712">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Fiji</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q574">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">East Timor</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q709">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Marshall Islands</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q265">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Uzbekistan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q227">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Azerbaijan</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q781">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Antigua and Barbuda</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q27">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Republic of Ireland</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q117">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Ghana</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q757">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Saint Vincent and the Grenadines</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q423">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">North Korea</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q763">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">Saint Kitts and Nevis</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q778">
+	<rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Country"/>
+	<rdfs:label xml:lang="en">The Bahamas</rdfs:label>
+</rdf:Description>
+
+</rdf:RDF>
