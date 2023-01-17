@@ -15,16 +15,12 @@ public class MainClass {
         Arrays.stream(Objects.requireNonNull(folder.listFiles()))
                 .filter(file -> file.getName().endsWith(".txt"))
                 .forEach(file -> recipes.add(reader.read(file.getPath())));
+
+
         //recipes.forEach(recipe-> System.out.println(recipe.getIDName()));
 
-        recipes.stream()
-                .flatMap(r-> r.getIngredients().stream())
-                .map(i-> i.getName())
-                .distinct()
-                .forEach(n-> System.out.println(n));
-
-        //RdfGenerator rdgen = new RdfGenerator(recipes);
-        //rdgen.generate();
+        RdfGenerator rdgen = new RdfGenerator(recipes);
+        rdgen.generate();
 
     }
 }
