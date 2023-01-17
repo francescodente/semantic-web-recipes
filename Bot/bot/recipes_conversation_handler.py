@@ -9,6 +9,8 @@ from ontology.recipes_ontology import RecipesOntology
 from ontology.model import *
 from typing import Callable
 
+from bot.utils.telegram_utils import escape_text
+
 class RecipesConversationHandler(ConversationHandler):
     def __init__(self, ontology: RecipesOntology):
         super(RecipesConversationHandler, self).__init__(
@@ -42,9 +44,9 @@ class RecipesConversationHandler(ConversationHandler):
                     CallbackQueryHandler(callback=self.with_chat_state(self.view_recipe_steps), pattern=bot_events.VIEW_STEPS),
                 ],
                 bot_states.VIEWING_STEPS: [
+                    CallbackQueryHandler(callback=self.go_back(bot_states.VIEWING_RECIPE), pattern=bot_events.BACK),
                     CallbackQueryHandler(callback=self.with_chat_state(self.next_step), pattern=bot_events.NEXT),
                     CallbackQueryHandler(callback=self.with_chat_state(self.prev_step), pattern=bot_events.PREV),
-                    CallbackQueryHandler(callback=self.go_back(bot_states.VIEWING_RECIPE), pattern=bot_events.BACK),
                 ]
             },
             fallbacks=[]
@@ -66,13 +68,13 @@ class RecipesConversationHandler(ConversationHandler):
     
     def main_menu_markup(self, chat_state: ChatState) -> InlineKeyboardMarkup:
         selected_country = chat_state.selected_country
-        selected_country_text = selected_country if selected_country else "None selected"
+        selected_country_text = selected_country.name if selected_country else "None selected"
 
         ingredients = chat_state.selected_ingredients
         selected_ingredients_text = ", ".join(ingredients) if len(ingredients) > 0 else "None selected"
 
         return InlineKeyboardMarkup([
-            [InlineKeyboardButton(text="GO ➡️", callback_data=bot_events.SELECT_RECIPE)],
+            [InlineKeyboardButton(text="GO ➡️", callback_data=bot_events.SELECT_DISH)],
             [InlineKeyboardButton(text=f"Ingredients: {selected_ingredients_text}", callback_data=bot_events.SELECT_INGREDIENTS)],
             [InlineKeyboardButton(text=f"Origin: {selected_country_text}", callback_data=bot_events.SELECT_ORIGIN)],
         ])
@@ -111,7 +113,7 @@ class RecipesConversationHandler(ConversationHandler):
     def show_available_origins(self, chat_state: ChatState, update: Update, context: CallbackContext):
         def country_button(i: int, country: Country) -> InlineKeyboardButton:
             return InlineKeyboardButton(
-                text=f"""{country.name} ({country.recipes} {"recipe" if country.recipes == 1 else "recipes"})""",
+                text=escape_text(f"""{country.name} ({country.recipes} {"recipe" if country.recipes == 1 else "recipes"})"""),
                 callback_data=i,
                 parse_mode=ParseMode.MARKDOWN_V2
             )
@@ -130,15 +132,15 @@ class RecipesConversationHandler(ConversationHandler):
     
     def origin_selected(self, chat_state: ChatState, update: Update, _: CallbackContext):
         update.callback_query.answer()
-        country = decode_iri(update.callback_query.data)
-        chat_state.set_selected_country(country)
+        country_index = int(update.callback_query.data)
+        chat_state.set_selected_country(country_index)
         chat_state.pop_message()
         chat_state.last_message().edit_reply_markup(self.main_menu_markup(chat_state))
         return bot_states.INITIAL
 
     def show_suitable_dishes(self, chat_state: ChatState, update: Update, context: CallbackContext):
-        def dish_button(dish: Dish) -> InlineKeyboardButton:
-            return InlineKeyboardButton(text=dish.name, callback_data=dish.iri)
+        def dish_button(i: int, dish: Dish) -> InlineKeyboardButton:
+            return InlineKeyboardButton(text=dish.name, callback_data=i)
 
         update.callback_query.answer()
         found_dishes = self.ontology.find_dishes(chat_state)
@@ -148,62 +150,64 @@ class RecipesConversationHandler(ConversationHandler):
             "Here's what I found! Select any dish to view the corresponding recipes",
             reply_markup=InlineKeyboardMarkup([
                 [self.back_button()],
-                *[[dish_button(dish)] for dish in found_dishes],
+                *[[dish_button(i, dish)] for i, dish in enumerate(found_dishes)],
             ])
         )
         return bot_states.SELECTING_DISH
 
     def dish_selected(self, chat_state: ChatState, update: Update, context: CallbackContext):
-        def recipe_button(recipe: Recipe) -> InlineKeyboardButton:
-            return InlineKeyboardButton(text=recipe.title, callback_data=recipe.iri)
+        def recipe_button(i: int, recipe: Recipe) -> InlineKeyboardButton:
+            return InlineKeyboardButton(text=f"{recipe.title} ({recipe.difficulty})", callback_data=i)
         
         update.callback_query.answer()
-        dish = chat_state.get_dish_from_search_result(update.callback_query.data)
+        dish = chat_state.get_dish_from_search_result(int(update.callback_query.data))
         chat_state.set_selected_dish(dish)
         chat_state.push_message(
             context,
             f"Here are the available recipes for '{dish.name}'",
             reply_markup=InlineKeyboardMarkup([
                 [self.back_button()],
-                *[[recipe_button(recipe)] for recipe in dish.recipes],
+                *[[recipe_button(i, recipe)] for i, recipe in enumerate(dish.recipes)],
             ])
         )
         return bot_states.SELECTING_RECIPE
     
     def recipe_selected(self, chat_state: ChatState, update: Update, context: CallbackContext):
         def show_ingredient(ingredient: Ingredient) -> str:
-            return f"{ingredient.quantity} {ingredient.unit} of {ingredient.name}"
+            return f"• {ingredient.quantity} {ingredient.unit} of {ingredient.name}"
 
         def show_ingredients(ingredients: list[Ingredient]) -> str:
             return "\n".join(map(show_ingredient, ingredients))
             
         update.callback_query.answer()
         dish = chat_state.selected_dish
-        recipe = dish.find_recipe(update.callback_query.data)
+        recipe = dish.recipes[int(update.callback_query.data)]
         chat_state.set_selected_recipe(recipe)
         ingredients = self.ontology.find_recipe_ingredients(recipe.iri)
         chat_state.push_message(
             context,
-            f"""
+            escape_text(f"""
 *{recipe.title}*
 
 Preparation time: {recipe.preparation_time}
+Difficulty: {recipe.difficulty}
 
 {show_ingredients(ingredients)}
-""",
+"""),
             parse_mode=ParseMode.MARKDOWN_V2,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="View steps", callback_data=bot_events.VIEW_STEPS)],
                 [self.back_button()],
+                [InlineKeyboardButton(text="View steps", callback_data=bot_events.VIEW_STEPS)],
             ])
         )
+        return bot_states.VIEWING_RECIPE
 
     def back_button(self):
         return InlineKeyboardButton(text="Go back", callback_data=bot_events.BACK)
     
     def view_recipe_steps(self, chat_state: ChatState, update: Update, context: CallbackContext):
         update.callback_query.answer()
-        recipe = chat_state.get_selected_recipe()
+        recipe = chat_state.selected_recipe
         step = self.ontology.find_step(recipe.initial_step)
         chat_state.change_step(step, 0)
         chat_state.push_message(
@@ -214,16 +218,16 @@ Preparation time: {recipe.preparation_time}
         )
         return bot_states.VIEWING_STEPS
     
-    def next_step(self, chat_state: ChatState, update: Update, context: CallbackContext):
+    def next_step(self, chat_state: ChatState, update: Update, _: CallbackContext):
         return self.change_step(chat_state, update, lambda s : s.next, lambda x: x + 1)
 
-    def prev_step(self, chat_state: ChatState, update: Update, context: CallbackContext):
+    def prev_step(self, chat_state: ChatState, update: Update, _: CallbackContext):
         return self.change_step(chat_state, update, lambda s : s.prev, lambda x: x - 1)
 
     def change_step(self, chat_state: ChatState, update: Update, get_step_id: Callable[[Step], int], update_index: Callable[[int], int]):
         update.callback_query.answer()
-        step_id = get_step_id(chat_state.get_current_step())
-        index = update_index(chat_state.get_step_index())
+        step_id = get_step_id(chat_state.current_step)
+        index = update_index(chat_state.step_index)
         step = self.ontology.find_step(step_id)
         chat_state.change_step(step, index)
         chat_state.last_message().edit_text(self.create_step_text(step, index), parse_mode=ParseMode.MARKDOWN_V2)
@@ -231,11 +235,11 @@ Preparation time: {recipe.preparation_time}
         return bot_states.VIEWING_STEPS
     
     def create_step_text(self, step: Step, index: int) -> str:
-        return f"""
-*Step {index}*
+        return escape_text(f"""
+*Step {index + 1}*
 
 {step.description}
-"""
+""")
     
     def step_buttons(self, step: Step):
         buttons = [[self.back_button()]]
