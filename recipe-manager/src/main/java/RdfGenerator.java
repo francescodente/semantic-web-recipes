@@ -54,7 +54,7 @@ public class RdfGenerator {
     private String dishUnitRDF(Dish dish){
         return "    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(dish.getName())+" -->\n" +
                 "\n" +
-                "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(dish.getName())+">\n" +
+                "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(dish.getName())+"\">\n" +
                 "        <rdf:type rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish\"/>\n" +
                 "        <recipes:hasOrigin rdf:resource=\"http://www.wikidata.org/entity/"+dish.getOrigin()+"\"/>\n" +
                 "        <rdfs:label>"+dish.getName()+"</rdfs:label>\n" +
