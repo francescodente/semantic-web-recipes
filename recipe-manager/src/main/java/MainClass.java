@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static java.lang.String.valueOf;
 
@@ -16,7 +17,14 @@ public class MainClass {
                 .forEach(file -> recipes.add(reader.read(file.getPath())));
         //recipes.forEach(recipe-> System.out.println(recipe.getIDName()));
 
-        JenaRdfGenerator rdgen = new JenaRdfGenerator();
-        rdgen.ontologySetup(recipes.get(0));
+        recipes.stream()
+                .flatMap(r-> r.getIngredients().stream())
+                .map(i-> i.getName())
+                .distinct()
+                .forEach(n-> System.out.println(n));
+
+        //RdfGenerator rdgen = new RdfGenerator(recipes);
+        //rdgen.generate();
+
     }
 }

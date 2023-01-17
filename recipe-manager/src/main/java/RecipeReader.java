@@ -10,7 +10,7 @@ public class RecipeReader {
 
     public Recipe read(String filePath) {
         File myFile = new File(filePath);
-        String dish = this.readField(myFile, "Dish").get(0);
+        String dishName = this.readField(myFile, "Dish").get(0);
         String title = this.readField(myFile, "Title").get(0);
         String origin = this.readField(myFile, "Origin").get(0);
         int time = Integer.parseInt(readField(myFile, "Time").get(0));
@@ -21,7 +21,8 @@ public class RecipeReader {
                 .map(this::parseIngredient)
                 .collect(Collectors.toList());
         List<String> steps = readField(myFile,"Directions");
-        return new Recipe(dish, title, origin, time, difficulty, ingredients, steps);
+        Dish dish = new Dish(dishName, origin);
+        return new Recipe(dish, title, time, difficulty, ingredients, steps);
     }
 
 

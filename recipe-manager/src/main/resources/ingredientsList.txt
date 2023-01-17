@@ -1,0 +1,80 @@
+ 03400763#vegetable oil
+ 03400737#pork
+ 03400650#garlic
+ 03400650#carrots
+ 03400650#green onions
+ 03400650#green cabbage
+ 03400688#cilantro
+ 03400689#black pepper
+ 03400689#salt
+ 03400689#garlic powder
+ 03400663#soy sauce
+ 03400768#lumpia wrappers
+ 03400760#cooking spray
+ 03400773#butter
+ 03400663#Dijon mustard
+ 03400652#poppy seeds
+ 03400663#Worcestershire sauce
+ 03400768#Hawaiian sweet rolls
+ 03400737#ham
+ 03400775#Swiss cheese
+ 03400773#salted butter
+ 03400761#all-purpose flour
+ 03400740#milk
+ 03400775#Gruyère cheese
+ 03400689#nutmeg
+ 03400768#white bread
+ 03400737#Black Forest ham
+ 03400744#eggs
+ 03400688#dill
+ 03400768#rye bread
+ 03400663#Thousand Island dressing
+ 03400737#corned beef
+ 03400737#pork sausage
+ 03400650#beets
+ 03400650#baking potatoes
+ 03400650#head cabbage
+ 03400689#white sugar
+ 03400689#pepper
+ 03400774#sour cream
+ 03400688#parsley
+ 03400689#paprika
+ 03400689#chili powder
+ 03400689#onion powder
+ 03400758#dried thyme
+ 03400758#dried marjoram
+ 03400758#dried basil
+ 03400737#beef sirloin
+ 03400650#onion
+ 03400650#green bell pepper
+ 03400768#hoagie rolls
+ 03400737#beef consomme
+ 03400737#roast beef
+ 03400775#provolone cheese
+ 03400650#eggplant
+ 03400763#olive oil
+ 03400650#celery
+ 03400688#oregano
+ 03400741#chicken thighs
+ 03400737#Italian salami
+ 03400650#red bell pepper
+ 03400650#red onion
+ 03400663#Italian-style salad dressing
+ 03400689#dry Italian-style salad dressing mix
+ 03400775#Parmesan cheese
+ 03400757#drained sauerkraut
+ 03400650#plum tomatoes
+ 03400650#green olives
+ 03400650#black olives
+ 03400775#mozzarella balls
+ 03400689#brown sugar
+ 03400757#drained capers
+ 03400757#drained tomatoes
+ 03400765#red wine vinegar
+ 03400765#dashi stock
+ 03400765#mirin
+ 03400765#tomato paste
+ 03400683#white rice
+ 03400768#rotini pasta
+
+

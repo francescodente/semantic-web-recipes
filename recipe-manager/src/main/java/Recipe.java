@@ -1,19 +1,18 @@
 import java.util.List;
+import java.util.Objects;
 
 import static java.lang.String.valueOf;
 
 public class Recipe {
-    private String origin;
-    private String dish;
+    private Dish dish;
     private String title;
     private Integer cookingTime;
     private String difficulty;
     private List<Ingredient> ingredients;
     private List<String> steps;
 
-    public Recipe(String dish, String title, String origin, Integer cookingTime, String difficulty, List<Ingredient> ingredients, List<String> steps) {
+    public Recipe(Dish dish, String title, Integer cookingTime, String difficulty, List<Ingredient> ingredients, List<String> steps) {
         super();
-        this.origin = origin;
         this.cookingTime = cookingTime;
         this.ingredients = ingredients;
         this.steps = steps;
@@ -25,10 +24,7 @@ public class Recipe {
     public String getDifficulty() {
         return difficulty;
     }
-    public String getOrigin() {
-        return origin;
-    }
-    public String getDish() {
+    public Dish getDish() {
         return dish;
     }
     public String getIDName() {
@@ -49,6 +45,24 @@ public class Recipe {
     }
     public List<String> getSteps() {
         return steps;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Recipe recipe = (Recipe) o;
+        return  Objects.equals(dish, recipe.dish) &&
+                Objects.equals(title, recipe.title) &&
+                Objects.equals(cookingTime, recipe.cookingTime) &&
+                Objects.equals(difficulty, recipe.difficulty) &&
+                Objects.equals(ingredients, recipe.ingredients) &&
+                Objects.equals(steps, recipe.steps);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dish, title, cookingTime, difficulty, ingredients, steps);
     }
 
 }
