@@ -14,6 +14,11 @@ Time
 40
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+Difficulty
+Hard
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
 Ingredients
 1 tablespoon olive oil
 
@@ -25,7 +30,7 @@ Ingredients
 
 0.25 cup soy sauce
 
-3 tablespoons mirin 
+3 tablespoons mirin
 
 3 tablespoons brown sugar
 

@@ -3,6 +3,8 @@ import java.io.FilenameFilter;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.lang.String.valueOf;
+
 public class MainClass {
 
     public static void main(String[] args) {
@@ -14,6 +16,9 @@ public class MainClass {
         Arrays.stream(Objects.requireNonNull(folder.listFiles()))
                 .filter(file -> file.getName().endsWith(".txt"))
                 .forEach(file -> recipes.add(reader.read(file.getPath())));
-        recipes.forEach(recipe-> System.out.println(recipe.getTitle()));
+        //recipes.forEach(recipe-> System.out.println(recipe.getIDName()));
+
+        RdfGenerator rdgen = new RdfGenerator();
+        rdgen.ontologySetup(recipes.get(0));
     }
 }

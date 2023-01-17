@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#"
+     xml:base="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:SpecificationMetadata1="https://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt">
+        <owl:imports rdf:resource="http://purl.org/heals/foodon/"/>
+        <owl:imports rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#difficulty -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#difficulty">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>easy</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>hard</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#containsIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#containsIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasIngredientWithQuantity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasIngredientWithQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasIngredientWithQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInitialStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInitialStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasMeasurementUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasMeasurementUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasQuantity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasRecipe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#isRecipeFor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#isRecipeFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#isRecipeFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasNext">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensBefore"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+        <rdfs:range rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPrevious">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#happensAfter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#isIngredientOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInstructions -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasInstructions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasTitle">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasDifficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasDifficulty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#difficulty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPreparationTimeInMinutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#hasPreparationTimeInMinutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/heals/food/Food -->
+
+    <rdf:Description rdf:about="http://purl.org/heals/food/Food">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BakingPowder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BakingPowder">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BasicPancakes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BasicPancakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <hasInitialStep rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_PreheatOven"/>
+        <hasTitle xml:lang="en">Pancakes</hasTitle>
+        <untitled-ontology-8:hasDifficulty xml:lang="en">easy</untitled-ontology-8:hasDifficulty>
+        <untitled-ontology-8:hasPreparationTimeInMinutes xml:lang="en">20</untitled-ontology-8:hasPreparationTimeInMinutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Clove -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Clove">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Cup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Cup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Flour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Flour">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400759"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Grams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Grams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#LeekPotatoSoup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#LeekPotatoSoup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Recipe"/>
+        <hasTitle xml:lang="en">Vegan leek &amp; potato soup</hasTitle>
+        <untitled-ontology-8:hasDifficulty xml:lang="en">medium</untitled-ontology-8:hasDifficulty>
+        <untitled-ontology-8:hasPreparationTimeInMinutes xml:lang="en">35</untitled-ontology-8:hasPreparationTimeInMinutes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Millilitres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Millilitres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Cook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Cook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_SpreadBatter"/>
+        <hasDescription xml:lang="en">Cook until surface of pancakes have some bubbles and a few have burst, 1 to 2 minutes. Flip carefully with a thin spatula, and cook until browned on the underside, 1 to 2 minutes more. Transfer to a baking sheet or platter; cover loosely with aluminum foil, and keep warm in oven. Continue with more oil and remaining batter. (You&apos;ll have 12 to 15 pancakes.) Serve warm, with desired toppings.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix2"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix"/>
+        <hasDescription xml:lang="en">In a small bowl, whisk together flour, sugar, baking powder, and salt; set aside.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_SpreadBatter"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix"/>
+        <hasDescription xml:lang="en">In a medium bowl, whisk together milk, butter (or oil), and egg. Add dry ingredients to milk mixture; whisk until just moistened (do not overmix; a few small lumps are fine).</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_PreheatOven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_PreheatOven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix"/>
+        <hasDescription xml:lang="en">Preheat oven to 200 degrees; have a baking sheet or heatproof platter ready to keep cooked pancakes warm in the oven</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_SpreadBatter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_SpreadBatter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_ToolPrep"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix2"/>
+        <hasDescription xml:lang="en">For each pancake, spoon 2 to 3 tablespoons of batter onto skillet, using the back of the spoon to spread batter into a round (you should be able to fit 2 to 3 in a large skillet).</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_ToolPrep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_ToolPrep">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_SpreadBatter"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancake_Mix2"/>
+        <hasDescription xml:lang="en">Heat a large skillet (nonstick or cast-iron) or griddle over medium. Fold a sheet of paper towel in half, and moisten with oil; carefully rub skillet with oiled paper towel.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancakes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Pancakes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Dish"/>
+        <hasRecipe rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BasicPancakes"/>
+        <untitled-ontology-8:hasOrigin rdf:resource="http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries#UnitedStates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Sugar">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Tablespoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Tablespoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Teaspoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Teaspoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#ToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#ToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#MeasurementUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Blend -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Blend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Serve"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Cook"/>
+        <hasDescription xml:lang="en">Pour in the almond milk, then remove from the heat and blitz using a hand blender until almost smooth, with a slightly chunky texture. Or, if you prefer, blitz until completely smooth.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Cook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Cook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Blend"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Wash&amp;Cut"/>
+        <hasDescription xml:lang="en">Heat the oil in a large pan over a medium heat and fry the garlic and leeks, stirring, until the veg has started to soften. Add the potatoes and stock, then cover and simmer for 15 mins until the leeks and potatoes are soft.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Serve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Serve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasPrevious rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Blend"/>
+        <hasDescription xml:lang="en">Reheat over a low heat if needed, then ladle into bowls and scatter with chives, drizzle with a little oil and serve with bread, if you like. Can be frozen for up to three months.</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VegetableStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VegetableStock">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#breadToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#breadToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1toserve"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#breadToServe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#butter">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400773"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Flour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chicken_egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chicken_egg">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400744"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chives -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chives">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400688"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chivesToServe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chivesToServe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1toserve"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chives"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#cow_milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#cow_milk">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400740"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#crustyBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#crustyBread">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#garlic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#garlic">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400674"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#leek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#leek">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400674"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#potatoes">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400681"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#rapeseedOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#rapeseedOil">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400763"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#salt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#salt">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400689"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#unsweetenedAlmondMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#unsweetenedAlmondMilk">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupFlour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupFlour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Flour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1CupMilk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#cow_milk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1Egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1Egg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#chicken_egg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1TablespnRapeseedOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1TablespnRapeseedOil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1tablespoon"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#rapeseedOil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1cup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Cup"/>
+        <hasValue xml:lang="en">1</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1tablespoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1tablespoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Tablespoon"/>
+        <hasValue xml:lang="en">1</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1toserve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1toserve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#ToServe"/>
+        <hasValue xml:lang="en">1</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Unit"/>
+        <hasValue xml:lang="en">1</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2TeaspnSalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2TeaspnSalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#salt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#1/2teaspoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Teaspoon"/>
+        <hasValue xml:lang="en">0.5</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2GarlicCloves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2GarlicCloves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2cloves"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#garlic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnButter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnButter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#butter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnSugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TablespnSugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Sugar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TeaspnBakingPowder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2TeaspnBakingPowder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#BakingPowder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2cloves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2cloves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Clove"/>
+        <hasValue xml:lang="en">2</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2tablespoons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Tablespoon"/>
+        <hasValue xml:lang="en">2</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#2teaspoons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Teaspoon"/>
+        <hasValue xml:lang="en">2</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500gLeeks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500gLeeks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500grams"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#leek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500gPotatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500gPotatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500grams"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#potatoes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500grams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500grams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Grams"/>
+        <hasValue xml:lang="en">500</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500ml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500ml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Quantity"/>
+        <hasMeasurementUnit rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#Millilitres"/>
+        <hasValue xml:lang="en">500</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500mlAlmondMilk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500mlAlmondMilk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500ml"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#unsweetenedAlmondMilk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500mlVegetableStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500mlVegetableStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#IngredientWithQuantity"/>
+        <hasQuantity rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#500ml"/>
+        <untitled-ontology-8:hasIngredient rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VegetableStock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Wash&amp;Cut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Wash&amp;Cut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/untitled-ontology-8#Step"/>
+        <untitled-ontology-8:hasNext rdf:resource="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt#VeganPLSoup_Cook"/>
+        <hasDescription xml:lang="en">Chop the garlic cloves, wash the potatoes and cut them into cubes. Thinly slice the leakes.</hasDescription>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
