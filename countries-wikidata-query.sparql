@@ -1,4 +1,4 @@
-PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/countries#>
+PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
 
 CONSTRUCT
 {
