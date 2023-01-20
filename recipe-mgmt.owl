@@ -42,47 +42,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty -->
-
-    <rdfs:Datatype rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty">
-        <owl:equivalentClass>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>easy</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>hard</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>medium</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </owl:equivalentClass>
-    </rdfs:Datatype>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -150,8 +109,8 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasInitialStep -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasInitialStep">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
     </owl:ObjectProperty>
@@ -216,24 +175,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasRecipe -->
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#isRecipeFor -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasRecipe">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasStep">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#isRecipeFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
     </owl:ObjectProperty>
     
 
@@ -270,8 +217,31 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDifficulty -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasDifficulty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#difficulty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Easy</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Hard</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -280,6 +250,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPreparationTimeInMinutes">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
@@ -289,6 +260,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasTitle -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -298,6 +270,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quantity"/>
     </owl:DatatypeProperty>
     
@@ -314,10 +287,42 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400644 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03400644">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfPlantOrigin"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400645 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03400645">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfAnimalOrigin"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400647 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03400647">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfPlantOrigin"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400648 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03400648">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfAnimalOrigin"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/heals/food/Food -->
 
     <owl:Class rdf:about="http://purl.org/heals/food/Food">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
     </owl:Class>
     
 
@@ -331,6 +336,22 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfAnimalOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfAnimalOrigin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfPlantOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#FoodOfPlantOrigin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/heals/food/Food"/>
+    </owl:Class>
     
 
 

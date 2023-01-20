@@ -16,7 +16,7 @@ class RecipesOntology:
             WHERE
             {
                 ?country a/rdfs:subClassOf* :Country .
-                ?country ^:hasOrigin/:hasRecipe ?recipe .
+                ?recipe :isRecipeFor/:hasOrigin ?country .
                 ?country :countryName ?name .
             }
             GROUP BY ?country ?name
@@ -45,7 +45,7 @@ class RecipesOntology:
             SELECT ?dish ?dishName ?recipe ?title ?prepTime ?initialStep ?difficulty
             WHERE
             {{
-                ?dish :hasRecipe ?recipe .
+                ?recipe :isRecipeFor ?dish .
                 ?dish rdfs:label ?dishName .
                 ?recipe :hasTitle ?title .
                 ?recipe :hasPreparationTimeInMinutes ?prepTime .

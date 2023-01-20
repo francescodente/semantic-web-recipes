@@ -3,10 +3,10 @@ PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
 CONSTRUCT
 {
   ?country a :Country ;
-    rdfs:label ?countryLabel .
+    :countryName ?countryLabel .
 }
 WHERE
 {
-  ?country wdt:P31 wd:Q6256 .
+  ?country wdt:P31/wdt:P279* wd:Q6256 .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }

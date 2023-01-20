@@ -73,10 +73,11 @@ public class RdfGenerator {
                 "        <rdf:type rdf:resource=\""+foodonURI+"\"/>\n" +
                 "    </owl:NamedIndividual>";
     }
-    private String recipeUnitRDF(Recipe recipe){ //TODO sistema initial step
+    private String recipeUnitRDF(Recipe recipe){
         return "    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(recipe.getTitle())+" -->\n" +
                 "\n" +
                 "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(recipe.getTitle())+"\">\n" +
+                "        <recipes:isRecipeFor rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+ nameToID(recipe.getDish().getName()) +"\"/>\n" +
                 "        <rdf:type rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe\"/>\n" +
                 "        <recipes:hasInitialStep>\n"+
                          stepsUnitRDF(recipe.getSteps(), 0)+

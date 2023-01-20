@@ -1,6 +1,5 @@
 <?xml version="1" encoding="UTF-8"?>
 <rdf:RDF
-	xmlns="http://www.semanticweb.org/it/unibo/semantic-web/recipes#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
@@ -41,9 +40,7 @@
 	xmlns:mediawiki="https://www.mediawiki.org/ontology#"
 	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
 	xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#">    
-    
-    
+    xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#">
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons">
@@ -96,77 +93,78 @@
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Philippines"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q928"/>
         <rdfs:label>Lumpia</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Hawaii"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Ham and Cheese Sliders</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/France"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q142"/>
         <rdfs:label>Croque Madame</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/United States"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Reuben Sandwich</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Ukraine"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q212"/>
         <rdfs:label>Red Borscht Soup</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/United States"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Steak Sandwich</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/France"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q142"/>
         <rdfs:label>French Dip Sandwiches</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Italy"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q38"/>
         <rdfs:label>Caponata</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Japan"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q17"/>
         <rdfs:label>Oyakodon</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Italy"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q38"/>
         <rdfs:label>Pasta Salad</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Traditional_Filipino_Lumpia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Traditional_Filipino_Lumpia">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -200,6 +198,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Hawaiian_Ham_and_Cheese_Sliders -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Hawaiian_Ham_and_Cheese_Sliders">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -228,6 +227,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Classic_Croque_Madame -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Classic_Croque_Madame">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -266,6 +266,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Reuben_Sandwich -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Reuben_Sandwich">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -289,6 +290,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ukrainian_Red_Borscht_Soup -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ukrainian_Red_Borscht_Soup">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -332,6 +334,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Philly_Steak_Sandwich -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Philly_Steak_Sandwich">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -380,6 +383,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Easy_French_Dip_Sandwiches -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Easy_French_Dip_Sandwiches">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -403,6 +407,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_ -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -431,6 +436,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_ -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>
@@ -459,6 +465,7 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Italian_Pasta_Salad -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Italian_Pasta_Salad">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
     <rdf:Description>

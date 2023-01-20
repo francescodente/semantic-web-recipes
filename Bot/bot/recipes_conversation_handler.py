@@ -113,9 +113,8 @@ class RecipesConversationHandler(ConversationHandler):
     def show_available_origins(self, chat_state: ChatState, update: Update, context: CallbackContext):
         def country_button(i: int, country: Country) -> InlineKeyboardButton:
             return InlineKeyboardButton(
-                text=escape_text(f"""{country.name} ({country.recipes} {"recipe" if country.recipes == 1 else "recipes"})"""),
-                callback_data=i,
-                parse_mode=ParseMode.MARKDOWN_V2
+                text=f"""{country.name} ({country.recipes} {"recipe" if country.recipes == 1 else "recipes"})""",
+                callback_data=i
             )
         update.callback_query.answer()
         countries = self.ontology.get_countries_with_at_least_one_dish()
