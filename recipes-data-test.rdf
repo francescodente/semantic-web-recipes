@@ -41,8 +41,7 @@
 	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
 	xmlns:dct="http://purl.org/dc/terms/"
     xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#">
-
-        <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
@@ -1024,9 +1023,9 @@
             </rdf:Description>
         </recipes:hasIngredientWithQuantity>
     </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_ -->
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata_Sicilian_Version -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata_Sicilian_Version">
         <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
@@ -1051,7 +1050,7 @@
     </rdf:Description>        </recipes:hasInitialStep>
         <recipes:hasDifficulty>Easy</recipes:hasDifficulty>
         <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</recipes:hasPreparationTimeInMinutes>
-        <recipes:hasTitle>Eggplant Caponata (Sicilian Version)</recipes:hasTitle>
+        <recipes:hasTitle>Eggplant Caponata Sicilian Version</recipes:hasTitle>
                 <recipes:hasIngredientWithQuantity>
             <rdf:Description>
                 <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#eggplant"/>
@@ -1180,9 +1179,9 @@
             </rdf:Description>
         </recipes:hasIngredientWithQuantity>
     </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_ -->
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon_Japanese_Chicken_and_Egg_Rice_Bowl -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon_Japanese_Chicken_and_Egg_Rice_Bowl">
         <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <recipes:hasInitialStep>
@@ -1207,7 +1206,7 @@
     </rdf:Description>        </recipes:hasInitialStep>
         <recipes:hasDifficulty>Hard</recipes:hasDifficulty>
         <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</recipes:hasPreparationTimeInMinutes>
-        <recipes:hasTitle>Oyakodon (Japanese Chicken and Egg Rice Bowl)</recipes:hasTitle>
+        <recipes:hasTitle>Oyakodon Japanese Chicken and Egg Rice Bowl</recipes:hasTitle>
                 <recipes:hasIngredientWithQuantity>
             <rdf:Description>
                 <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#olive_oil"/>

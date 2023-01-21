@@ -15,7 +15,6 @@ class RecipesOntology:
             SELECT DISTINCT ?country ?name (COUNT(?recipe) AS ?n)
             WHERE
             {
-                ?country a :Country .
                 ?recipe :isRecipeFor/:hasOrigin ?country .
                 ?country :countryName ?name .
             }
@@ -47,11 +46,11 @@ class RecipesOntology:
             WHERE
             {{
                 ?dish rdfs:label ?dishName .
-                ?recipe :isRecipeFor ?dish .
-                ?recipe :hasTitle ?title .
-                ?recipe :hasPreparationTimeInMinutes ?prepTime .
-                ?recipe :hasInitialStep ?initialStep .
-                ?recipe :hasDifficulty ?difficulty .
+                ?recipe :isRecipeFor ?dish ;
+                        :hasTitle ?title ;
+                        :hasPreparationTimeInMinutes ?prepTime ;
+                        :hasInitialStep ?initialStep ;
+                        :hasDifficulty ?difficulty .
                 {where_clause}
             }}
         """
@@ -71,9 +70,9 @@ class RecipesOntology:
             WHERE
             {{
                 <{recipe_iri}> :hasIngredientWithQuantity ?iwq .
-                ?iwq :hasIngredient/rdfs:label ?ingredient .
-                ?iwq :hasQuantity ?quantity .
-                ?iwq :hasMeasurementUnit/rdfs:label ?unit .
+                ?iwq :hasIngredient/rdfs:label ?ingredient ;
+                     :hasQuantity ?quantity ;
+                     :hasMeasurementUnit/rdfs:label ?unit .
             }}
         """
 
