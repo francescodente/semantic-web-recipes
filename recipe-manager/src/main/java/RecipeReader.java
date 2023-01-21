@@ -58,7 +58,7 @@ public class RecipeReader {
 
         double quantity = Double.parseDouble(line[0]);
         String measurementUnit = line[1];
-        String ingName = ingLine.substring(line[0].length()+line[1].length()+1);
+        String ingName = ingLine.substring(line[0].length()+line[1].length()+2);
 
         return new Ingredient(quantity, measurementUnit , ingName);
     }

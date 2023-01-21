@@ -8,17 +8,11 @@ class Country:
     recipes: int
 
 @dataclass
-class Step:
-    description: str
-    next: str | None
-    prev: str | None
-
-@dataclass
 class Recipe:
     iri: str
     title: str
     preparation_time: timedelta
-    initial_step: str
+    initial_step: any
     difficulty: str
 
 @dataclass

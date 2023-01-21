@@ -49,6 +49,7 @@ public class RdfGenerator {
                 "\n" +
                 "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+unit+"\">\n" +
                 "        <rdf:type rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit\"/>\n" +
+                "        <rdfs:label>"+unit+"</rdfs:label>\n" +
                 "    </owl:NamedIndividual>";
     }
     private String dishUnitRDF(Dish dish){
@@ -71,9 +72,24 @@ public class RdfGenerator {
                 "\n" +
                 "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(ingName)+"\">\n" +
                 "        <rdf:type rdf:resource=\""+foodonURI+"\"/>\n" +
+                "        <rdfs:label>" + ingName + "</rdfs:label>\n" +
                 "    </owl:NamedIndividual>";
     }
+
+    private String recipeIngredientRDF(Ingredient ingredient) {
+        return "        <recipes:hasIngredientWithQuantity>\n" +
+                "            <rdf:Description>\n" +
+                "                <recipes:hasIngredient rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(ingredient.getName())+"\"/>\n" +
+                "                <recipes:hasMeasurementUnit rdf:resource=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#" + ingredient.getMeasurementUnit() + "\"/>\n" +
+                "                <recipes:hasQuantity>" + ingredient.getQuantity() + "</recipes:hasQuantity>\n" +
+                "            </rdf:Description>\n" +
+                "        </recipes:hasIngredientWithQuantity>\n";
+    }
+
     private String recipeUnitRDF(Recipe recipe){
+        String ingredientsRDF = recipe.getIngredients().stream()
+                .map(this::recipeIngredientRDF)
+                .collect(Collectors.joining("\n"));
         return "    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(recipe.getTitle())+" -->\n" +
                 "\n" +
                 "    <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#"+nameToID(recipe.getTitle())+"\">\n" +
@@ -85,8 +101,11 @@ public class RdfGenerator {
                 "        <recipes:hasDifficulty>"+recipe.getDifficulty()+"</recipes:hasDifficulty>\n" +
                 "        <recipes:hasPreparationTimeInMinutes rdf:datatype=\"http://www.w3.org/2001/XMLSchema#int\">"+recipe.getCookingTime()+"</recipes:hasPreparationTimeInMinutes>\n" +
                 "        <recipes:hasTitle>"+recipe.getTitle()+"</recipes:hasTitle>\n" +
+                "        " + ingredientsRDF +
                 "    </owl:NamedIndividual>";
     }
+
+
 
     private String nextGenerator(List<String> steps, int index){
         if(index!=steps.size()-1)

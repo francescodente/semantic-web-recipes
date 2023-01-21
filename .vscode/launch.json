@@ -4,10 +4,10 @@
             "name": "Telegram bot",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/main.py",
+            "program": "${workspaceFolder}/src/main.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/src/.env"
         }
     ]
 }

@@ -11,10 +11,11 @@ world.get_ontology(os.getenv("ONTOLOGY_IRI")).load()
 world.get_ontology(os.getenv("COUNTRIES_IRI")).load()
 world.get_ontology(os.getenv("RECIPES_IRI")).load()
 
-# onto = world.get_ontology("http://inferred/recipes")
-# with onto:
-#     sync_reasoner_hermit(world, infer_property_values=True)
 
+onto = world.get_ontology("http://recipes/inferred")
+
+with onto:
+    sync_reasoner_hermit(world, infer_property_values=True)
 
 bot = TelegramBot(token, RecipesOntology(world))
 bot.start()

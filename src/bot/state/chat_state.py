@@ -4,7 +4,7 @@ from telegram.ext import CallbackContext
 
 class ChatState:
     def __init__(self, id: int):
-        self.id: int = id
+        self.id = id
         self.messages_stack: list[Message] = []
         self.countries: list[Country] = []
         self.selected_country: Country | None = None
@@ -13,6 +13,10 @@ class ChatState:
         self.selected_dish: Dish = None
         self.selected_recipe: Recipe = None
         self.step_index = 0
+        self.vegan = False
+
+    def toggle_vegan(self):
+        self.vegan = not self.vegan
     
     def remember_countries(self, countries: list[Country]):
         self.countries = countries
@@ -35,7 +39,7 @@ class ChatState:
     def set_selected_recipe(self, recipe: Recipe):
         self.selected_recipe = recipe
 
-    def change_step(self, step: Step, index: int):
+    def change_step(self, step, index: int):
         self.step_index = index
         self.current_step = step
 

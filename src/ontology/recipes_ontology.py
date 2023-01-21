@@ -15,13 +15,14 @@ class RecipesOntology:
             SELECT DISTINCT ?country ?name (COUNT(?recipe) AS ?n)
             WHERE
             {
-                ?country a/rdfs:subClassOf* :Country .
+                ?country a :Country .
                 ?recipe :isRecipeFor/:hasOrigin ?country .
                 ?country :countryName ?name .
             }
             GROUP BY ?country ?name
             ORDER BY ?name
-        """
+            """
+
         return [Country(country.iri, name, count) for country, name, count in self.world.sparql(query)]
     
     def find_dishes(self, chat_state: ChatState) -> list[Dish]:
@@ -45,8 +46,8 @@ class RecipesOntology:
             SELECT ?dish ?dishName ?recipe ?title ?prepTime ?initialStep ?difficulty
             WHERE
             {{
-                ?recipe :isRecipeFor ?dish .
                 ?dish rdfs:label ?dishName .
+                ?recipe :isRecipeFor ?dish .
                 ?recipe :hasTitle ?title .
                 ?recipe :hasPreparationTimeInMinutes ?prepTime .
                 ?recipe :hasInitialStep ?initialStep .
@@ -59,43 +60,21 @@ class RecipesOntology:
         for dish, dish_name, recipe, recipe_title, preparation_time, initial_step, difficulty in self.world.sparql(query, params):
             if dish.iri not in dishes:
                 dishes[dish.iri] = Dish(dish.iri, dish_name, [])
-            dishes[dish.iri].recipes.append(Recipe(recipe.iri, recipe_title, timedelta(minutes=int(preparation_time)), initial_step.iri, difficulty))
+            dishes[dish.iri].recipes.append(Recipe(recipe.iri, recipe_title, timedelta(minutes=int(preparation_time)), initial_step, difficulty))
         return list(dishes.values())
     
     def find_recipe_ingredients(self, recipe_iri: str) -> list[Ingredient]:
         query = f"""
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
         
-            SELECT ?name ?quantityValue ?unit
+            SELECT ?ingredient ?quantity ?unit
             WHERE
             {{
                 <{recipe_iri}> :hasIngredientWithQuantity ?iwq .
-                ?iwq :hasIngredient ?ingredient .
+                ?iwq :hasIngredient/rdfs:label ?ingredient .
                 ?iwq :hasQuantity ?quantity .
-                ?quantity :hasValue ?quantityValue .
-                ?quantity :hasMeasurementUnit ?unit .
-                ?ingredient rdfs:label ?name .
-                ?unit rdfs:label ?unitName .
+                ?iwq :hasMeasurementUnit/rdfs:label ?unit .
             }}
         """
 
-        return [Ingredient(name, quantity, unit.iri) for name, quantity, unit in self.world.sparql(query)]
-    
-    def find_step(self, step_iri: str) -> Step:
-        query = f"""
-            PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
-
-            SELECT ?description ?prev ?next
-            WHERE
-            {{
-                <{step_iri}> :hasDescription ?description .
-                OPTIONAL {{ <{step_iri}> :hasPrevious ?prev }} .
-                OPTIONAL {{ <{step_iri}> :hasNext ?next }} .
-            }}
-        """
-
-        def iri_or_none(x):
-            return x.iri if x else None
-        
-        description, prev_step, next_step = next(self.world.sparql(query))
-        return Step(description, iri_or_none(next_step), iri_or_none(prev_step))
+        return [Ingredient(ingredient, quantity, unit) for ingredient, quantity, unit in self.world.sparql(query)]

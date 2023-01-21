@@ -22,6 +22,7 @@ class RecipesConversationHandler(ConversationHandler):
                     CallbackQueryHandler(callback=self.with_chat_state(self.request_ingredients), pattern=bot_events.SELECT_INGREDIENTS),
                     CallbackQueryHandler(callback=self.with_chat_state(self.show_available_origins), pattern=bot_events.SELECT_ORIGIN),
                     CallbackQueryHandler(callback=self.with_chat_state(self.show_suitable_dishes), pattern=bot_events.SELECT_DISH),
+                    CallbackQueryHandler(callback=self.with_chat_state(self.toggle_vegan), pattern=bot_events.TOGGLE_VEGAN),
                 ],
                 bot_states.SELECTING_INGREDIENTS: [
                     CallbackQueryHandler(callback=self.go_back(bot_states.INITIAL), pattern=bot_events.BACK),
@@ -73,10 +74,13 @@ class RecipesConversationHandler(ConversationHandler):
         ingredients = chat_state.selected_ingredients
         selected_ingredients_text = ", ".join(ingredients) if len(ingredients) > 0 else "None selected"
 
+        vegan_icon = "✅" if chat_state.vegan else "❌"
+
         return InlineKeyboardMarkup([
             [InlineKeyboardButton(text="GO ➡️", callback_data=bot_events.SELECT_DISH)],
             [InlineKeyboardButton(text=f"Ingredients: {selected_ingredients_text}", callback_data=bot_events.SELECT_INGREDIENTS)],
             [InlineKeyboardButton(text=f"Origin: {selected_country_text}", callback_data=bot_events.SELECT_ORIGIN)],
+            [InlineKeyboardButton(text=f"Vegan? {vegan_icon}", callback_data=bot_events.TOGGLE_VEGAN)],
         ])
 
     def begin(self, chat_state: ChatState, _: Update, context: CallbackContext):
@@ -137,6 +141,12 @@ class RecipesConversationHandler(ConversationHandler):
         chat_state.last_message().edit_reply_markup(self.main_menu_markup(chat_state))
         return bot_states.INITIAL
 
+    def toggle_vegan(self, chat_state: ChatState, update: Update, _: CallbackContext):
+        update.callback_query.answer()
+        chat_state.toggle_vegan()
+        chat_state.last_message().edit_reply_markup(self.main_menu_markup(chat_state))
+        return bot_states.INITIAL
+
     def show_suitable_dishes(self, chat_state: ChatState, update: Update, context: CallbackContext):
         def dish_button(i: int, dish: Dish) -> InlineKeyboardButton:
             return InlineKeyboardButton(text=dish.name, callback_data=i)
@@ -173,7 +183,7 @@ class RecipesConversationHandler(ConversationHandler):
     
     def recipe_selected(self, chat_state: ChatState, update: Update, context: CallbackContext):
         def show_ingredient(ingredient: Ingredient) -> str:
-            return f"• {ingredient.quantity} {ingredient.unit} of {ingredient.name}"
+            return f"• *{ingredient.quantity}* {ingredient.unit} of {ingredient.name}"
 
         def show_ingredients(ingredients: list[Ingredient]) -> str:
             return "\n".join(map(show_ingredient, ingredients))
@@ -188,8 +198,8 @@ class RecipesConversationHandler(ConversationHandler):
             escape_text(f"""
 *{recipe.title}*
 
-Preparation time: {recipe.preparation_time}
-Difficulty: {recipe.difficulty}
+*Preparation time*: {recipe.preparation_time}
+*Difficulty*: {recipe.difficulty}
 
 {show_ingredients(ingredients)}
 """),
@@ -202,12 +212,12 @@ Difficulty: {recipe.difficulty}
         return bot_states.VIEWING_RECIPE
 
     def back_button(self):
-        return InlineKeyboardButton(text="Go back", callback_data=bot_events.BACK)
+        return InlineKeyboardButton(text="⬆️ Go back ⬆️", callback_data=bot_events.BACK)
     
     def view_recipe_steps(self, chat_state: ChatState, update: Update, context: CallbackContext):
         update.callback_query.answer()
         recipe = chat_state.selected_recipe
-        step = self.ontology.find_step(recipe.initial_step)
+        step = recipe.initial_step
         chat_state.change_step(step, 0)
         chat_state.push_message(
             context,
@@ -218,32 +228,29 @@ Difficulty: {recipe.difficulty}
         return bot_states.VIEWING_STEPS
     
     def next_step(self, chat_state: ChatState, update: Update, _: CallbackContext):
-        return self.change_step(chat_state, update, lambda s : s.next, lambda x: x + 1)
+        return self.change_step(chat_state, update, lambda s : s.hasNext, lambda x: x + 1)
 
     def prev_step(self, chat_state: ChatState, update: Update, _: CallbackContext):
-        return self.change_step(chat_state, update, lambda s : s.prev, lambda x: x - 1)
+        return self.change_step(chat_state, update, lambda s : s.hasPrevious, lambda x: x - 1)
 
-    def change_step(self, chat_state: ChatState, update: Update, get_step_id: Callable[[Step], int], update_index: Callable[[int], int]):
+    def change_step(self, chat_state: ChatState, update: Update, get_step, update_index: Callable[[int], int]):
         update.callback_query.answer()
-        step_id = get_step_id(chat_state.current_step)
+        step = get_step(chat_state.current_step)
         index = update_index(chat_state.step_index)
-        step = self.ontology.find_step(step_id)
         chat_state.change_step(step, index)
         chat_state.last_message().edit_text(self.create_step_text(step, index), parse_mode=ParseMode.MARKDOWN_V2)
         chat_state.last_message().edit_reply_markup(self.step_buttons(step))
         return bot_states.VIEWING_STEPS
     
-    def create_step_text(self, step: Step, index: int) -> str:
+    def create_step_text(self, step, index: int) -> str:
         return escape_text(f"""
 *Step {index + 1}*
 
-{step.description}
+{step.hasDescription}
 """)
     
-    def step_buttons(self, step: Step):
-        buttons = [[self.back_button()]]
-        if step.next is not None:
-            buttons.append([InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT)])
-        if step.prev is not None:
-            buttons.append([InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV)])
-        return InlineKeyboardMarkup(buttons)
+    def step_buttons(self, step):
+        return InlineKeyboardMarkup([
+            [InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT if step.hasNext is not None else bot_events.BACK)],
+            [InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV if step.hasPrevious is not None else bot_events.BACK)],
+        ])
