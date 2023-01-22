@@ -1,0 +1,3 @@
+python-telegram-bot~=13.5
+owlready2~=0.39
+rdflib==5.0.0

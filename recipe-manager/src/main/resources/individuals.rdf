@@ -1,4 +1,4 @@
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
+<!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
@@ -50,72 +50,72 @@
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Lumpia">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Philippines"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q928"/>
         <rdfs:label>Lumpia</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ham_and_Cheese_Sliders">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Hawaii"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Ham and Cheese Sliders</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/France"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q142"/>
         <rdfs:label>Croque Madame</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Reuben_Sandwich">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/United States"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Reuben Sandwich</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Red_Borscht_Soup">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Ukraine"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q212"/>
         <rdfs:label>Red Borscht Soup</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Steak_Sandwich">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/United States"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Steak Sandwich</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#French_Dip_Sandwiches">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/France"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q142"/>
         <rdfs:label>French Dip Sandwiches</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Caponata">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Italy"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q38"/>
         <rdfs:label>Caponata</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Japan"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q17"/>
         <rdfs:label>Oyakodon</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Pasta_Salad">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
-        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Italy"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q38"/>
         <rdfs:label>Pasta Salad</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Traditional_Filipino_Lumpia -->
@@ -353,488 +353,4 @@
         <recipes:hasDifficulty>Easy</recipes:hasDifficulty>
         <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</recipes:hasPreparationTimeInMinutes>
         <recipes:hasTitle>Easy French Dip Sandwiches</recipes:hasTitle>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_ -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Eggplant_Caponata__Sicilian_Version_">
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <recipes:hasInitialStep>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Toss eggplant with salt and place in a colander set over a bowl. Let sit, about 30 minutes. Rinse and pat dry.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Heat 2 tablespoons olive oil in a large skillet over medium heat. Add celery; cook, stirring often, until softened, about 4 minutes. Add onion and garlic; cook and stir until onion is soft and lightly golden, about 5 minutes. Transfer the mixture to a bowl using a slotted spoon.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Heat remaining 2 tablespoons olive oil in the skillet. Add eggplant and cook, stirring constantly, until lightly browned, 5 to 7 minutes. Stir in celery mixture, tomatoes, olives, capers, tomato paste, and oregano. Bring to a boil; reduce heat to low and simmer uncovered until caponata is thickened, about 15 minutes.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Season caponata with vinegar, sugar, salt, and black pepper. Transfer to a serving bowl and garnish with parsley.</recipes:hasDescription>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasInitialStep>
-        <recipes:hasDifficulty>Easy</recipes:hasDifficulty>
-        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</recipes:hasPreparationTimeInMinutes>
-        <recipes:hasTitle>Eggplant Caponata (Sicilian Version)</recipes:hasTitle>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_ -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Oyakodon__Japanese_Chicken_and_Egg_Rice_Bowl_">
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <recipes:hasInitialStep>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Heat oil in a large skillet over medium heat. Add chicken and cook until beginning to brown, about 5 minutes. Add onion; cook and stir until onion is translucent, about 5 minutes.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Pour in stock, then whisk in soy sauce, mirin, and brown sugar; stir until sugar dissolves. Bring to a boil, then lower heat and simmer until slightly reduced, about 10 minutes.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Whisk eggs in a bowl until well-beaten, then pour into the hot stock mixture. Cover the skillet, reduce the heat, and steam until egg is cooked, about 5 minutes. Remove from the heat.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Divide rice among 4 deep soup bowls and top with equal amounts of the soup mixture.</recipes:hasDescription>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasInitialStep>
-        <recipes:hasDifficulty>Hard</recipes:hasDifficulty>
-        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</recipes:hasPreparationTimeInMinutes>
-        <recipes:hasTitle>Oyakodon (Japanese Chicken and Egg Rice Bowl)</recipes:hasTitle>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Italian_Pasta_Salad -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Quick_Italian_Pasta_Salad">
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <recipes:hasInitialStep>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Bring a large pot of lightly salted water to a boil. Cook rotini pasta at a boil until tender yet firm to the bite, about 8 minutes. Drain and rinse with cold water until cool.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Combine pasta, salami, bell peppers, onion, mozzarella balls, and olives in a large bowl. Add salad dressing and toss to coat.</recipes:hasDescription>
-        <recipes:hasNext>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
-        <recipes:hasDescription>Season pasta salad with dry salad dressing mix and stir to combine. Sprinkle with Parmesan cheese before serving.</recipes:hasDescription>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasNext>
-    </rdf:Description>        </recipes:hasInitialStep>
-        <recipes:hasDifficulty>Easy</recipes:hasDifficulty>
-        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</recipes:hasPreparationTimeInMinutes>
-        <recipes:hasTitle>Quick Italian Pasta Salad</recipes:hasTitle>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_vegetable_oil -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_vegetable_oil">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_pork -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_pork">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_onion -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_onion">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_garlic -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_garlic">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_carrots -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_carrots">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_onions -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_onions">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_cabbage -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_cabbage">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_cilantro -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_cilantro">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_black_pepper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_black_pepper">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salt -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salt">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_garlic_powder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_garlic_powder">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_soy_sauce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_soy_sauce">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_lumpia_wrappers -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_lumpia_wrappers">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_vegetable_oil_for_frying,_or_as_needed -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_vegetable_oil_for_frying,_or_as_needed">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_cooking_spray -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_cooking_spray">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_butter -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_butter">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Dijon_mustard -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Dijon_mustard">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_poppy_seeds -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_poppy_seeds">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Worcestershire_sauce -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Worcestershire_sauce">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Hawaiian_sweet_rolls -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Hawaiian_sweet_rolls">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_ham -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_ham">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Swiss_cheese -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Swiss_cheese">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salted_butter -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salted_butter">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_all-purpose_flour -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_all-purpose_flour">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_milk -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_milk">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Gruyère_cheese -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Gruyère_cheese">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_nutmeg -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_nutmeg">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_bread -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_bread">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Black_Forest_ham -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Black_Forest_ham">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_eggs -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_eggs">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_water -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_water">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dill -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dill">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_rye_bread -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_rye_bread">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Thousand_Island_dressing -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Thousand_Island_dressing">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_corned_beef -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_corned_beef">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_sauerkraut -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_sauerkraut">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_pork_sausage -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_pork_sausage">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beets -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beets">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_baking_potatoes -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_baking_potatoes">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_head_cabbage -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_head_cabbage">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_tomatoes -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_tomatoes">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_tomato_paste -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_tomato_paste">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_sugar -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_sugar">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salt_and_pepper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_salt_and_pepper">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_sour_cream -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_sour_cream">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_parsley -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_parsley">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_paprika -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_paprika">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_chili_powder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_chili_powder">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_onion_powder -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_onion_powder">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_thyme -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_thyme">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_marjoram -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_marjoram">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_basil -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dried_basil">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beef_sirloin -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beef_sirloin">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_sliced_onion -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_sliced_onion">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_bell_pepper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_bell_pepper">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_hoagie_rolls -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_hoagie_rolls">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beef_consomme -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_beef_consomme">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_roast_beef -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_roast_beef">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_provolone_cheese -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_provolone_cheese">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_eggplant -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_eggplant">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_olive_oil -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_olive_oil">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_celery -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_celery">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_plum_tomatoes -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_plum_tomatoes">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_olives -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_green_olives">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_capers -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_drained_capers">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_oregano -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_oregano">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_wine_vinegar -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_wine_vinegar">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_chicken_thighs -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_chicken_thighs">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dashi_stock -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dashi_stock">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_mirin -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_mirin">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_brown_sugar -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_brown_sugar">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_rice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_white_rice">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_rotini_pasta -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_rotini_pasta">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Italian_salami -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Italian_salami">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_bell_pepper -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_bell_pepper">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_onion -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_red_onion">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_black_olives -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_black_olives">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_mozzarella_balls -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_mozzarella_balls">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Italian-style_salad_dressing -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Italian-style_salad_dressing">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dry_Italian-style_salad_dressing_mix -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_dry_Italian-style_salad_dressing_mix">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Parmesan_cheese -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#_Parmesan_cheese">
-        <rdf:type rdf:resource="http://purl.org/heals/food/Food"/>
     </owl:NamedIndividual>

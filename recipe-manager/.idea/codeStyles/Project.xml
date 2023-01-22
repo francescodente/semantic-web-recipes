@@ -1,10 +1,7 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
     <ScalaCodeStyleSettings>
-      <option name="NOT_CONTINUATION_INDENT_FOR_PARAMS" value="true" />
+      <option name="TYPE_ANNOTATION_STRUCTURAL_TYPE" value="false" />
     </ScalaCodeStyleSettings>
-    <codeStyleSettings language="Scala">
-      <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
-    </codeStyleSettings>
   </code_scheme>
 </component>

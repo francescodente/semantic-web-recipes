@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Telegram bot",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "envFile": "${workspaceFolder}/src/.env"
+        }
+    ]
+}
