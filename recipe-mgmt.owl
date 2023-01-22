@@ -379,17 +379,22 @@
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganRecipe -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#VeganRecipe">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#containsIngredient"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientOfAnimalOrigin"/>
-                    </owl:Restriction>
-                </owl:complementOf>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#containsIngredient"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientOfAnimalOrigin"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
     </owl:Class>
 </rdf:RDF>
 

@@ -15,7 +15,7 @@ world.get_ontology(os.getenv("RECIPES_IRI")).load()
 onto = world.get_ontology("http://recipes/inferred")
 
 with onto:
-    sync_reasoner_hermit(world, infer_property_values=True)
+    sync_reasoner_hermit(world, infer_property_values=True, keep_tmp_file=True)
 
 bot = TelegramBot(token, RecipesOntology(world))
 bot.start()

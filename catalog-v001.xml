@@ -4,7 +4,6 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/heals/foodon/" uri="http://purl.org/heals/foodon"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/heals/food/" uri="http://purl.org/heals/food"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1674300276037" name="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt" uri="recipe-mgmt_XML.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1674300276037" name="http://www.semanticweb.org/it/unibo/semantic-web/recipes" uri="recipe-mgmt.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1674379982861" name="http://www.semanticweb.org/it/unibo/semantic-web/recipes" uri="recipe-mgmt.owl"/>
     </group>
 </catalog>
