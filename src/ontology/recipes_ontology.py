@@ -43,7 +43,7 @@ class RecipesOntology:
             params.append(ingredient)
         
         if chat_state.vegan:
-            where_clause = add_condition(where_clause, "?recipe a :VeganRecipe .")
+            where_clause = add_condition(where_clause, "FILTER NOT EXISTS { ?recipe :containsIngredient ?ingr . ?ingr a/rdfs:subClassOf* :IngredientOfAnimalOrigin } .")
 
         query = f"""
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
