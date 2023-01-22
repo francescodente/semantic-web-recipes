@@ -7,7 +7,8 @@ import static java.lang.String.valueOf;
 public class MainClass {
 
     public static void main(String[] args) {
-        String folderPath = System.getProperty("user.dir")+ "\\" +"src\\main\\resources\\recipes";
+        String rootPath = System.getProperty("user.dir")+ "\\" +"src\\main\\resources";
+        String folderPath = rootPath + "\\recipes";
         RecipeReader reader = new RecipeReader();
         List<Recipe> recipes = new ArrayList<>();
         File folder = new File(folderPath);
@@ -20,7 +21,7 @@ public class MainClass {
         //recipes.forEach(recipe-> System.out.println(recipe.getIDName()));
 
         RdfGenerator rdgen = new RdfGenerator(recipes);
-        rdgen.generate();
+        rdgen.generate(rootPath + "\\recipes-data-test.rdf");
 
     }
 }

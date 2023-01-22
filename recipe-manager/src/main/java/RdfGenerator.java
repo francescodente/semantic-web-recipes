@@ -5,6 +5,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -146,11 +148,77 @@ public class RdfGenerator {
         return recipes.stream().map(r-> recipeUnitRDF(r));
     }
 
-    public void generate(){
-        Arrays.asList(measurementUnitsDefinition(), allDishesDefinition(), allRecipesDefinition(), allIngredientsDefinition())
-                .stream().flatMap(s->s)
-                .forEach(x-> System.out.println(x));
+    private String genHeader(){
+        String h = "<?xml version=\"1\" encoding=\"UTF-8\"?>\n" +
+                "<rdf:RDF\n" +
+                "\txmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n" +
+                "\txmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n" +
+                "\txmlns:sesame=\"http://www.openrdf.org/schema/sesame#\"\n" +
+                "\txmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n" +
+                "\txmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\"\n" +
+                "\txmlns:fn=\"http://www.w3.org/2005/xpath-functions#\"\n" +
+                "\txmlns:foaf=\"http://xmlns.com/foaf/0.1/\"\n" +
+                "\txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
+                "\txmlns:hint=\"http://www.bigdata.com/queryHints#\"\n" +
+                "\txmlns:bd=\"http://www.bigdata.com/rdf#\"\n" +
+                "\txmlns:bds=\"http://www.bigdata.com/rdf/search#\"\n" +
+                "\txmlns:psn=\"http://www.wikidata.org/prop/statement/value-normalized/\"\n" +
+                "\txmlns:pqn=\"http://www.wikidata.org/prop/qualifier/value-normalized/\"\n" +
+                "\txmlns:prn=\"http://www.wikidata.org/prop/reference/value-normalized/\"\n" +
+                "\txmlns:mwapi=\"https://www.mediawiki.org/ontology#API/\"\n" +
+                "\txmlns:gas=\"http://www.bigdata.com/rdf/gas#\"\n" +
+                "\txmlns:wdt=\"http://www.wikidata.org/prop/direct/\"\n" +
+                "\txmlns:wdtn=\"http://www.wikidata.org/prop/direct-normalized/\"\n" +
+                "\txmlns:psv=\"http://www.wikidata.org/prop/statement/value/\"\n" +
+                "\txmlns:ps=\"http://www.wikidata.org/prop/statement/\"\n" +
+                "\txmlns:pqv=\"http://www.wikidata.org/prop/qualifier/value/\"\n" +
+                "\txmlns:pq=\"http://www.wikidata.org/prop/qualifier/\"\n" +
+                "\txmlns:prv=\"http://www.wikidata.org/prop/reference/value/\"\n" +
+                "\txmlns:pr=\"http://www.wikidata.org/prop/reference/\"\n" +
+                "\txmlns:wdno=\"http://www.wikidata.org/prop/novalue/\"\n" +
+                "\txmlns:p=\"http://www.wikidata.org/prop/\"\n" +
+                "\txmlns:wikibase=\"http://wikiba.se/ontology#\"\n" +
+                "\txmlns:wd=\"http://www.wikidata.org/entity/\"\n" +
+                "\txmlns:wdata=\"http://www.wikidata.org/wiki/Special:EntityData/\"\n" +
+                "\txmlns:wds=\"http://www.wikidata.org/entity/statement/\"\n" +
+                "\txmlns:wdv=\"http://www.wikidata.org/value/\"\n" +
+                "\txmlns:wdref=\"http://www.wikidata.org/reference/\"\n" +
+                "\txmlns:schema=\"http://schema.org/\"\n" +
+                "\txmlns:prov=\"http://www.w3.org/ns/prov#\"\n" +
+                "\txmlns:skos=\"http://www.w3.org/2004/02/skos/core#\"\n" +
+                "\txmlns:geo=\"http://www.opengis.net/ont/geosparql#\"\n" +
+                "\txmlns:geof=\"http://www.opengis.net/def/geosparql/function/\"\n" +
+                "\txmlns:mediawiki=\"https://www.mediawiki.org/ontology#\"\n" +
+                "\txmlns:ontolex=\"http://www.w3.org/ns/lemon/ontolex#\"\n" +
+                "\txmlns:dct=\"http://purl.org/dc/terms/\"\n" +
+                "    xmlns:recipes=\"http://www.semanticweb.org/it/unibo/semantic-web/recipes#\">";
+        return h;
+    }
 
+    private String genFooter(){
+        return "\n</rdf:RDF>";
+    }
+
+    private void write_to_file(String filepath, String content){
+        try {
+            FileWriter myWriter = new FileWriter(filepath);
+            myWriter.write(content);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public void generate(String filepath){
+        String res = genHeader() +
+                Stream.of(measurementUnitsDefinition(), allDishesDefinition(), allRecipesDefinition(), allIngredientsDefinition())
+                        .flatMap(s->s)
+                        .collect(Collectors.toList())
+                        .toString()
+                + genFooter();
+        write_to_file(filepath, res);
 
     }
 }

@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.org/heals/ingredient/" uri="http://purl.org/heals/ingredient"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/heals/foodon/" uri="http://purl.org/heals/foodon"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/heals/food/" uri="http://purl.org/heals/food"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-<<<<<<< HEAD
-        <uri id="Automatically generated entry, Timestamp=1674334275521" name="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt" uri="recipe-mgmt_XML.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1674334275521" name="http://www.semanticweb.org/it/unibo/semantic-web/recipes" uri="recipe-mgmt.owl"/>
-=======
-        <uri id="Automatically generated entry, Timestamp=1674300276037" name="http://www.semanticweb.org/dente/ontologies/2022/10/recipe-mgmt" uri="recipe-mgmt_XML.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1674300276037" name="http://www.semanticweb.org/it/unibo/semantic-web/recipes" uri="recipe-mgmt.owl"/>
->>>>>>> 84eeb4b191767f2040d734285fff47eaf3fa4aa8
-    </group>
-</catalog>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"/>
