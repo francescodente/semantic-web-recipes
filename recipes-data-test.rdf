@@ -41,7 +41,7 @@
 	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
 	xmlns:dct="http://purl.org/dc/terms/"
     xmlns:recipes="http://www.semanticweb.org/it/unibo/semantic-web/recipes#">
-    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
+		<!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons-->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#tablespoons">
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#MeasurementUnit"/>
@@ -114,6 +114,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
         <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q30"/>
         <rdfs:label>Ham and Cheese Sliders</rdfs:label>
+    </owl:NamedIndividual>
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Dish"/>
+        <recipes:hasOrigin rdf:resource="http://www.wikidata.org/entity/Q928"/>
+        <rdfs:label>Test</rdfs:label>
     </owl:NamedIndividual>
     <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Croque_Madame -->
 
@@ -413,6 +420,47 @@
                 <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Swiss_cheese"/>
                 <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#slices"/>
                 <recipes:hasQuantity>8.0</recipes:hasQuantity>
+            </rdf:Description>
+        </recipes:hasIngredientWithQuantity>
+    </owl:NamedIndividual>
+    <!-- http://www.semanticweb.org/it/unibo/semantic-web/recipes#Vegan_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Vegan_Recipe">
+        <recipes:isRecipeFor rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Test"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
+        <recipes:hasInitialStep>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Heat 1 tablespoon vegetable oil in a wok or large skillet over high heat. Add pork; cook and stir until crumbly and no pink is showing, 5 to 7 minutes. Remove pork from the pan and set aside. Drain grease from the pan, leaving just a thin coating.</recipes:hasDescription>
+        <recipes:hasNext>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Add onion and garlic to the pan; cook and stir until fragrant, about 2 minutes. Stir in the cooked pork, carrots, green onions, cabbage, and cilantro. Season with pepper, salt, garlic powder, and soy sauce. Remove from the heat, and set aside until cool enough to handle, about 5 minutes.</recipes:hasDescription>
+        <recipes:hasNext>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Assemble lumpia: Place 3 heaping tablespoons of filling diagonally near one corner of a lumpia wrapper, leaving a 1 1/2 inch space at both ends. Fold the side along the length of the filling over the filling, tuck in both ends, and roll neatly and tightly to close. Moisten the other side of the wrapper with water to seal the edge. Transfer to a plate and cover with plastic wrap to retain moisture. Repeat to assemble remaining lumpia.</recipes:hasDescription>
+        <recipes:hasNext>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Heat 1/2 inch vegetable oil in a heavy skillet over medium heat for 5 minutes.</recipes:hasDescription>
+        <recipes:hasNext>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
+        <recipes:hasDescription>Slide 3 to 4 lumpia into the hot oil, making sure the seams are facing down. Fry, turning occasionally, until all sides are golden brown, 1 to 2 minutes. Transfer to a paper towel-lined plate to drain. Repeat to fry remaining lumpia. Serve immediately.</recipes:hasDescription>
+    </rdf:Description>        </recipes:hasNext>
+    </rdf:Description>        </recipes:hasNext>
+    </rdf:Description>        </recipes:hasNext>
+    </rdf:Description>        </recipes:hasNext>
+    </rdf:Description>        </recipes:hasInitialStep>
+        <recipes:hasDifficulty>Hard</recipes:hasDifficulty>
+        <recipes:hasPreparationTimeInMinutes rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</recipes:hasPreparationTimeInMinutes>
+        <recipes:hasTitle>Vegan Recipe</recipes:hasTitle>
+                <recipes:hasIngredientWithQuantity>
+            <rdf:Description>
+                <recipes:hasIngredient rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#onion"/>
+                <recipes:hasMeasurementUnit rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#cups"/>
+                <recipes:hasQuantity>3.0</recipes:hasQuantity>
             </rdf:Description>
         </recipes:hasIngredientWithQuantity>
     </owl:NamedIndividual>
