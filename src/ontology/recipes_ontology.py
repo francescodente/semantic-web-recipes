@@ -8,6 +8,9 @@ class RecipesOntology:
     def __init__(self, world: World):
         self.world = world
 
+    def run_query(self, query):
+        return self.world.sparql(query)
+
     def get_countries_with_at_least_one_dish(self) -> list[Country]:
         query = """
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
@@ -38,6 +41,9 @@ class RecipesOntology:
             param_name = f"?ingr{i}"
             where_clause = add_condition(where_clause, f"""?recipe :containsIngredient/rdfs:label {param_name} FILTER({param_name} = ??) .""")
             params.append(ingredient)
+        
+        if chat_state.vegan:
+            where_clause = add_condition(where_clause, "?recipe a :VeganRecipe .")
 
         query = f"""
             PREFIX : <http://www.semanticweb.org/it/unibo/semantic-web/recipes#>
