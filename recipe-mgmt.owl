@@ -90,6 +90,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasIngredient">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#IngredientWithQuantity"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Ingredient"/>
     </owl:ObjectProperty>
@@ -110,7 +111,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasInitialStep">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Recipe"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
     </owl:ObjectProperty>
@@ -133,8 +133,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasNext">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensBefore"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPrevious"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
@@ -156,8 +154,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/it/unibo/semantic-web/recipes#hasPrevious">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#happensAfter"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/it/unibo/semantic-web/recipes#Step"/>

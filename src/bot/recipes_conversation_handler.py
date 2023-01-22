@@ -235,7 +235,7 @@ class RecipesConversationHandler(ConversationHandler):
 
     def change_step(self, chat_state: ChatState, update: Update, get_step, update_index: Callable[[int], int]):
         update.callback_query.answer()
-        step = get_step(chat_state.current_step)
+        step = get_step(chat_state.current_step)[0]
         index = update_index(chat_state.step_index)
         chat_state.change_step(step, index)
         chat_state.last_message().edit_text(self.create_step_text(step, index), parse_mode=ParseMode.MARKDOWN_V2)
@@ -251,6 +251,6 @@ class RecipesConversationHandler(ConversationHandler):
     
     def step_buttons(self, step):
         return InlineKeyboardMarkup([
-            [InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT if step.hasNext is not None else bot_events.BACK)],
-            [InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV if step.hasPrevious is not None else bot_events.BACK)],
+            [InlineKeyboardButton(text="➡️", callback_data=bot_events.NEXT if len(step.hasNext) > 0 else bot_events.BACK)],
+            [InlineKeyboardButton(text="⬅️", callback_data=bot_events.PREV if len(step.hasPrevious) > 0 else bot_events.BACK)],
         ])
